@@ -4,6 +4,18 @@ Afin de présenter plusieurs propositions au client de manière conviviale.
 
 Basée sur [chaos-boilerplate-front](https://github.com/youpiwaza/chaos-boilerplate-front).
 
+```bash
+# Accès au projet depuis la console NODE
+cd Documents\_dev\charte-graphique
+
+# (Installation)
+npm i
+yarn
+
+# watch
+gulp watch
+```
+
 ---
 
 ## chaos-boilerplate-front
