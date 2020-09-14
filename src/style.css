@@ -20,21 +20,18 @@
 /* Basic css */
 * {
   box-sizing: border-box;
+  transition: all .5s;
 }
 
 html {
-  /* Rainbow ! */
-  background-color: #3b9c9c;
-  background: linear-gradient(140deg, #ea2115, #d5721c, #d5bc1f, #3d9970, #0074d9, #b10dc9, #f012be, #0074d9, #001f3f);
-  background-size: 1400% 1400%;
-
-  color: #fff5ee;
+  
 }
 
 body {
   /* https://www.transparenttextures.com/ */
-  background: url('assets/images/bg.png') repeat;
-  display: flex;
+  /* background: url('assets/images/bg.png') repeat; */
+  background-color: #fbfbfb;
+  color: #303030;
   font-family: Arial, sans-serif;
   font-size: 1em;
   justify-content: center;
@@ -63,24 +60,50 @@ a:hover {
 }
 
 .container {
-  padding: 2.5em .5em;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+}
+
+section {
+  align-items: center;
+  border-bottom: 1px solid #303030;
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  min-width: 100%;
+  position: relative;
+}
+
+.button-down {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 100%;
+  bottom: 15px;
+  height: 30px;
+  left: 50%;
+  line-height: 30px;
+  outline: none;
+  position: absolute;
+  transform: translateX(-50%);
+  vertical-align: middle;
+  width: 30px;
+}
+.button-down:hover {
+  background: #A9A9A9;
+}
+.button-down:active, .button-down:focus {
+  background: #303030;
+  color: #fbfbfb;
 }
 
 /* ~Responsive */
 @media screen and (min-width: 620px) {
-  .container {
-    padding: 3em 1em;
-  }
 }
 
 @media screen and (min-width: 960px) {
-  h1, h2, h3 {
-    margin-top: 1.4em;
-  }
   .container {
-    max-width: 1200px;
-    width: 90%;
+    padding: 1em;
   }
 }
 
