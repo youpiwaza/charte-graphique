@@ -1,10 +1,13 @@
 console.log('script.js');
 
 import { gsap } from './js/vendors/index.js';
-import { ScrollTrigger } from "./js/vendors/ScrollTrigger.js";
+import { ScrollTrigger } from './js/vendors/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
-import { ScrollToPlugin } from "./js/vendors/ScrollToPlugin.js";
+import { ScrollToPlugin } from './js/vendors/ScrollToPlugin.js';
 gsap.registerPlugin(ScrollToPlugin);
+
+// KO, import via <script>
+// import { tinycolor } from './js/vendors/tinycolor.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   //// Font face observer
@@ -79,7 +82,65 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  //// Gestion des couleurs
+  let couleursHTML = gsap.utils.toArray('.color');
+  couleursHTML.forEach(couleurHTML => {
+    const couleurText = couleurHTML.textContent;
+    const tinyCouleur = tinycolor(couleurText);
+
+    // Test de la couleur fournie
+    if(!tinyCouleur.isValid()) {
+      // Si non valide, affichage d'une erreur
+      couleurHTML.style.backgroundColor = '#FF4136';
+      couleurHTML.style.color = '#fbfbfb';
+      couleurHTML.style.lineHeight = 'calc(60px - 1em)';
+      couleurHTML.textContent = 'Couleur invalide';
+    }
+    else {
+      // Crétion d'une div afin d'afficher la couleur
+      const newColorPastilleHTML = document.createElement('div');
+      newColorPastilleHTML.className = 'pastille';
+
+      // Modifier la couleur de fond en fonction de la valeur passée en texte dans le HTML
+      newColorPastilleHTML.style.backgroundColor = tinyCouleur.toHexString();
+
+      // Ajuster la couleur du texte si la couleur à afficher est trop sombre
+      //    https://github.com/bgrins/TinyColor#getbrightness
+      if(tinyCouleur.isDark()) {
+        newColorPastilleHTML.style.color = '#fbfbfb';
+      }
+
+      newColorPastilleHTML.textContent = tinyCouleur.toHexString();
+
+
+      // Afficher CMJN RVB Hexa
+      // Print CMJN / C 20 ; M 70 ; J 100 ; N 10
+      // Web RGB / R 204 ; V 106 ; B 45
+      // Hexadécimal / #CC6A2D
+
+      /// Création d'une liste populée automatiquement
+      const newList     = document.createElement('ul');
+
+      const newListItemCMJN = document.createElement('li');
+      const newContentCMJN  = document.createTextNode(tinyCouleur.toHslString());
+      newListItemCMJN.appendChild(newContentCMJN);
+      newList.appendChild(newListItemCMJN);
+
+      const newListItemRGB = document.createElement('li');
+      const newContentRGB  = document.createTextNode(tinyCouleur.toRgbString());
+      newListItemRGB.appendChild(newContentRGB);
+      newList.appendChild(newListItemRGB);
+
+      const newListItemHex = document.createElement('li');
+      const newContentHex  = document.createTextNode(tinyCouleur.toHexString());
+      newListItemHex.appendChild(newContentHex);
+      newList.appendChild(newListItemHex);
+
+
+      // Et on remplace le contenu précédent
+      couleurHTML.textContent = "";
+      couleurHTML.appendChild(newColorPastilleHTML);
+      couleurHTML.appendChild(newList);
+    }
+  });
 });
-
-
-

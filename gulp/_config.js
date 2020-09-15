@@ -12,6 +12,7 @@ const jsVendors = [
   // 'node_modules/gsap/dist/**/*.js',
   // Modern modules import, at root. Careful, npm stuf != from gsap zip file
   'node_modules/gsap/*.js',
+  'node_modules/tinycolor2/tinycolor.js',
   'node_modules/fontfaceobserver/fontfaceobserver.js',
 ];
 
