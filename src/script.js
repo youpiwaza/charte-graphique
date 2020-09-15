@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   /// Génération des boutons pour passer à la partie suivante
   // Pour chaque section (excepté la première)
-  for(let i = 0 ; i < sectionsHTML.length ; i++ ) {
+  for(let i = 0 ; i < sectionsHTML.length - 1 ; i++ ) {
     // On crée un bouton
     const newButton     = document.createElement('button');
     const newContent    = document.createTextNode('˅');
