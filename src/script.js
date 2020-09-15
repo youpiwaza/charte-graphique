@@ -1,5 +1,11 @@
 console.log('script.js');
 
+import { gsap } from './js/vendors/index.js';
+import { ScrollTrigger } from "./js/vendors/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+import { ScrollToPlugin } from "./js/vendors/ScrollToPlugin.js";
+gsap.registerPlugin(ScrollToPlugin);
+
 window.addEventListener('DOMContentLoaded', () => {
   //// Font face observer
   // https://github.com/bramstein/fontfaceobserver
@@ -17,12 +23,35 @@ window.addEventListener('DOMContentLoaded', () => {
   // (browserWidth < 960)
   //   ? console.log('< 960')
   //   : console.log('> 960');
+
+  // Animations
+
+  // Boutons pour testay
+  const buttonsHTML   = gsap.utils.toArray('.button-down');
+  // Recup toutes les sections
+  let sectionsHTML  = gsap.utils.toArray('section');
+  // On vire la première (pas de boutons qui pointent vers elle)
+  sectionsHTML.shift();
+
+  // // Chaque bouton pointe vers la section suivante
+  for(let i = 0 ; i < buttonsHTML.length ; i++ ) {
+    buttonsHTML[i].addEventListener('click', () => {
+      // console.log('#' + sectionsHTML[i].id);
+      gsap.to(window, {duration: 1, scrollTo: '#' + sectionsHTML[i].id});
+    });
+  }
+
+  // Idem pour les liens du sommaire
+  const liensSommaireHTML = gsap.utils.toArray('#sommaire a');
+  // On vire la page sommaire
+  const cloneSectionsPourSommaire = sectionsHTML.slice(1);
+  for(let i = 0 ; i < liensSommaireHTML.length ; i++ ) {
+    liensSommaireHTML[i].addEventListener('click', () => {
+      gsap.to(window, {duration: 1, scrollTo: '#' + cloneSectionsPourSommaire[i].id});
+    });
+  }
+
 });
 
 
-import { gsap } from './js/vendors/index.js';
 
-gsap.to(".button-down", {duration: 1, x: 100});
-
-// import { ScrollTrigger } from "./js/vendors/ScrollTrigger.js";
-// gsap.registerPlugin(ScrollTrigger);
