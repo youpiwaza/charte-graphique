@@ -53,6 +53,7 @@ a,
 a:active,
 a:visited {
   color: #ff833b;
+  cursor: pointer;
 }
 
 a:hover {

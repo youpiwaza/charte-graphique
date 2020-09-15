@@ -38,8 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Pour chaque section (excepté la première)
   for(let i = 0 ; i < sectionsHTML.length ; i++ ) {
     // On crée un bouton
-    let newButton       = document.createElement('button');
-    let newContent      = document.createTextNode('˅');
+    const newButton     = document.createElement('button');
+    const newContent    = document.createTextNode('˅');
     newButton.className = 'button-down';
     newButton.appendChild(newContent);
 
@@ -53,16 +53,28 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-
-  //// Animations
-
-  // Idem pour les liens du sommaire
-  const liensSommaireHTML = gsap.utils.toArray('#sommaire a');
-  // On vire la page sommaire
+  /// Génération des liens du sommaire
+  // On vire la page sommaire des sections
   const cloneSectionsPourSommaire = sectionsHTML.slice(1);
-  for(let i = 0 ; i < liensSommaireHTML.length ; i++ ) {
-    liensSommaireHTML[i].addEventListener('click', () => {
+
+  // Récupération de la liste du sommaire
+  let ulHTML = document.querySelector('#sommaire ul');
+
+  for(let i = 0 ; i < cloneSectionsPourSommaire.length ; i++ ) {
+    const texteDuH2DeLaSection = cloneSectionsPourSommaire[i].querySelector('h2').textContent;
+
+    // Création de l'élément de liste qui contient un lien
+    const newListItem = document.createElement('li');
+    const newLink     = document.createElement('a');
+    const newContent  = document.createTextNode(texteDuH2DeLaSection);
+
+    // Imbrication des éléments puis ajout au html, dans la liste
+    newLink     .appendChild(newContent);
+    newListItem .appendChild(newLink);
+    ulHTML      .appendChild(newListItem);
+
+    // Ajout de l'animation au clic (scroll vers la section concernée)
+    newLink.addEventListener('click', () => {
       gsap.to(window, {duration: 1, scrollTo: '#' + cloneSectionsPourSommaire[i].id});
     });
   }
