@@ -43,12 +43,12 @@ window.addEventListener('DOMContentLoaded', () => {
     newButton.className = 'button-down';
     newButton.appendChild(newContent);
 
-    console.log(sectionsHTML[i]);
+    // console.log(sectionsHTML[i]);
     sectionsHTML[i].appendChild(newButton);
 
     // Ajout de l'animation au clic (scroll vers la section concernée)
     newButton.addEventListener('click', () => {
-      console.log('#' + sectionsHTML[i + 1].id);
+      // console.log('#' + sectionsHTML[i + 1].id);
       gsap.to(window, {duration: 1, scrollTo: '#' + sectionsHTML[i + 1].id});
     });
   }
