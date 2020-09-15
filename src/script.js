@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
   //// Générations automatiques des éléments de navigation
 
   /// Génération des boutons pour passer à la partie suivante
-  // Pour chaque section (excepté la première)
+  // Pour chaque section (excepté la première & la dernière)
   for(let i = 0 ; i < sectionsHTML.length - 1 ; i++ ) {
     // On crée un bouton
     const newButton     = document.createElement('button');
