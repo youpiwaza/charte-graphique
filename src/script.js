@@ -24,22 +24,38 @@ window.addEventListener('DOMContentLoaded', () => {
   //   ? console.log('< 960')
   //   : console.log('> 960');
 
-  // Animations
 
-  // Boutons pour testay
-  const buttonsHTML   = gsap.utils.toArray('.button-down');
-  // Recup toutes les sections
+
+  // Recupération de toutes les sections
   let sectionsHTML  = gsap.utils.toArray('section');
   // On vire la première (pas de boutons qui pointent vers elle)
   sectionsHTML.shift();
 
-  // // Chaque bouton pointe vers la section suivante
-  for(let i = 0 ; i < buttonsHTML.length ; i++ ) {
-    buttonsHTML[i].addEventListener('click', () => {
-      // console.log('#' + sectionsHTML[i].id);
-      gsap.to(window, {duration: 1, scrollTo: '#' + sectionsHTML[i].id});
+
+  //// Générations automatiques des éléments de navigation
+
+  /// Génération des boutons pour passer à la partie suivante
+  // Pour chaque section (excepté la première)
+  for(let i = 0 ; i < sectionsHTML.length ; i++ ) {
+    // On crée un bouton
+    let newButton       = document.createElement('button');
+    let newContent      = document.createTextNode('˅');
+    newButton.className = 'button-down';
+    newButton.appendChild(newContent);
+
+    console.log(sectionsHTML[i]);
+    sectionsHTML[i].appendChild(newButton);
+
+    // Ajout de l'animation au clic (scroll vers la section concernée)
+    newButton.addEventListener('click', () => {
+      console.log('#' + sectionsHTML[i + 1].id);
+      gsap.to(window, {duration: 1, scrollTo: '#' + sectionsHTML[i + 1].id});
     });
   }
+
+
+
+  //// Animations
 
   // Idem pour les liens du sommaire
   const liensSommaireHTML = gsap.utils.toArray('#sommaire a');

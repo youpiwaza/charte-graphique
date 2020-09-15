@@ -18,6 +18,8 @@ gulp watch
 
 Note : Ne pas passer par gulp prod, qui ne gère pas (encore) correctement les modules JS (pas de transpile ou de concat sur les vendeurs -_-).
 
+Note : Les liens du sommaire, ainsi que les boutons de navigation (section suivante) sont générés en JS
+
 ---
 
 ## chaos-boilerplate-front
