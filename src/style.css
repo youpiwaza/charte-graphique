@@ -32,11 +32,14 @@ body {
   /* background: url('assets/images/bg.png') repeat; */
   background-color: #fbfbfb;
   color: #303030;
+  display: flex;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   font-size: 1em;
   justify-content: center;
   line-height: 1.4em;
   min-height: 100vh;
+  padding: 0.5em;
 }
 
 body.fonts-loaded {
@@ -60,12 +63,6 @@ a:hover {
   color: #ff9659;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 0.5em;
-}
-
 section {
   align-items: center;
   border-bottom: 1px solid #303030;
@@ -75,6 +72,10 @@ section {
   width: 100%;
   padding-bottom: 50px;
   position: relative;
+}
+
+footer {
+  padding-top: 0.5em;
 }
 
 .button-down {
@@ -115,10 +116,13 @@ section {
 }
 
 @media screen and (min-width: 960px) {
-  .container {
+  body {
     padding: 1em;
   }
 
+  footer {
+    padding-top: 1em;
+  }
   
 }
 
