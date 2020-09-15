@@ -18,3 +18,11 @@ window.addEventListener('DOMContentLoaded', () => {
   //   ? console.log('< 960')
   //   : console.log('> 960');
 });
+
+
+import { gsap } from './js/vendors/index.js';
+
+gsap.to(".button-down", {duration: 1, x: 100});
+
+// import { ScrollTrigger } from "./js/vendors/ScrollTrigger.js";
+// gsap.registerPlugin(ScrollTrigger);

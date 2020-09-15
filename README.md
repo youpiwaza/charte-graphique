@@ -16,6 +16,8 @@ yarn
 gulp watch
 ```
 
+Note : Ne pas passer par gulp prod, qui ne gère pas (encore) correctement les modules JS (pas de transpile ou de concat sur les vendeurs -_-).
+
 ---
 
 ## chaos-boilerplate-front
