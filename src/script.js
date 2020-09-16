@@ -85,7 +85,8 @@ window.addEventListener('DOMContentLoaded', () => {
   //// Gestion des couleurs
   let couleursHTML = gsap.utils.toArray('.color');
   couleursHTML.forEach(couleurHTML => {
-    const couleurText = couleurHTML.textContent;
+    const labelCouleur = couleurHTML.textContent;
+    const couleurText = couleurHTML.dataset.color;
     couleurHTML.textContent = "";
 
     const tinyCouleur = tinycolor(couleurText);
@@ -130,7 +131,8 @@ window.addEventListener('DOMContentLoaded', () => {
         newColorPastilleHTML.style.color = '#fbfbfb';
       }
 
-      newColorPastilleHTML.textContent = tinyCouleur.toHexString();
+      // newColorPastilleHTML.textContent = tinyCouleur.toHexString();
+      newColorPastilleHTML.textContent = labelCouleur;
 
       // Afficher CMJN RVB Hexa
       // Print CMJN / C 20 ; M 70 ; J 100 ; N 10
