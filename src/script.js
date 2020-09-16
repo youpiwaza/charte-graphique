@@ -87,6 +87,7 @@ window.addEventListener('DOMContentLoaded', () => {
   couleursHTML.forEach(couleurHTML => {
     const labelCouleur = couleurHTML.textContent;
     const couleurText = couleurHTML.dataset.color;
+    // On supprime le contenu précédent
     couleurHTML.textContent = "";
 
     const tinyCouleur = tinycolor(couleurText);
@@ -153,7 +154,7 @@ window.addEventListener('DOMContentLoaded', () => {
       newListItemHex.appendChild(newContentHex);
       newList.appendChild(newListItemHex);
     }
-    // Et on remplace le contenu précédent
+    // On ajoute le contenu au html
     couleurHTML.appendChild(newColorPastilleHTML);
     couleurHTML.appendChild(newList);
   });

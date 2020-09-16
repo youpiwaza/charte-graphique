@@ -67,7 +67,7 @@ section {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
   position: relative;
 }
 
@@ -106,7 +106,7 @@ ul {
   display: table;
 }
 
-.dual {
+.colonnes {
   display: flex;
   flex-direction: column;
 }
@@ -125,7 +125,7 @@ ul {
 
 /* ~Responsive */
 @media screen and (min-width: 620px) {
-  .dual {
+  .colonnes {
     flex-direction: row;
     justify-content: space-evenly;
     width: 80vw;
