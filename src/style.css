@@ -103,7 +103,7 @@ ul {
 }
 
 .color {
-  display: flex;
+  display: table;
 }
 
 .dual {
@@ -114,10 +114,11 @@ ul {
 /*** Projet ***/
 .pastille {
   height: 100px;
-  line-height: calc(100px - 1em);
+  display: table-cell;
   min-width: 100px;
   padding: 0.5em;
   text-align: center;
+  vertical-align: middle;
   width: 100px;
 }
 
