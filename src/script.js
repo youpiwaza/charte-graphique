@@ -83,7 +83,10 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   //// Gestion des couleurs
-  let couleursHTML = gsap.utils.toArray('.color');
+  let couleursHTML = gsap.utils.toArray('.colors .color');
+  // Need at least one declinaison
+  let isDeclinaisonColumn = false;
+
   couleursHTML.forEach(couleurHTML => {
     const labelCouleur = couleurHTML.textContent;
     const couleurText = couleurHTML.dataset.color;
@@ -153,9 +156,34 @@ window.addEventListener('DOMContentLoaded', () => {
       const newContentHex  = document.createTextNode(tinyCouleur.toHexString());
       newListItemHex.appendChild(newContentHex);
       newList.appendChild(newListItemHex);
+
+      /// Gestion de la colonne déclinaison
+      const isDeclinsaison = couleurHTML.dataset.declinaison;
+      if( //dem users x')
+        isDeclinsaison === 'ok' || 
+        isDeclinsaison === 'yes' || 
+        isDeclinsaison === 'oui' || 
+        isDeclinsaison === 'true' 
+      ) {
+        // At least one must be set for the column to be displayed
+        isDeclinaisonColumn = true;
+      }
     }
     // On ajoute le contenu au html
     couleurHTML.appendChild(newColorPastilleHTML);
     couleurHTML.appendChild(newList);
   });
+
+  //// Gestion de la déclinaison des couleurs
+  // Si pas de déclinaison, on masque la colonne
+  if(!isDeclinaisonColumn) {
+    console.log('if(!isDeclinaisonColumn) {')
+    const declinaisonsContainer = document.querySelector('.declinaisonsColumn');
+    declinaisonsContainer.classList.add('hidden');
+  }
+  else {
+    // Sinon, on la remplit
+    console.log('if(isDeclinaisonColumn) {')
+
+  }
 });

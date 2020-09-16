@@ -102,16 +102,24 @@ ul {
   color: #fbfbfb;
 }
 
-.color {
-  display: table;
+.hidden {
+  display: none;
 }
 
+
+
+/*** Projet ***/
 .colonnes {
   display: flex;
   flex-direction: column;
 }
 
-/*** Projet ***/
+
+/** Couleurs **/
+.color {
+  display: table;
+}
+
 .pastille {
   height: 100px;
   display: table-cell;
@@ -122,6 +130,14 @@ ul {
   width: 100px;
 }
 
+#couleurs ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+#couleurs .description {
+  margin-right: 1em;
+}
 
 /* ~Responsive */
 @media screen and (min-width: 620px) {
@@ -148,3 +164,37 @@ ul {
 }
 
 
+
+
+
+
+
+
+
+/* !!! Passer en flex, la 3eme colonne ne sera pas toujours la */
+.colonnes > div {
+  width: calc(100% * 1/3);
+}
+
+#declinaisons {
+  height: 100px; /* Même taille que l'autre */
+  width: 100%;
+}
+
+
+.declinaison td {
+  text-align: center;
+  vertical-align: middle;
+  
+  font-size: .8em;
+}
+
+.pute {
+  color: white;
+  height: 70px;
+  width: 70px;
+  padding: .5em;
+  min-width: 70px;
+  display: table-cell;
+  vertical-align: middle;
+}

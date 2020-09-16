@@ -36,6 +36,8 @@
     <div class="content">
       <h1>Charte graphique</h1>
       <h2>CLIENT</h2>
+      <h3>JS > Faire des putains de fonctoins et répartir en fichiers</h3>
+      <h3>Revoir css ? Première couleurs faire une table ? et revoir noms dans hmtl</h3>
     </div>
   </section>
 
@@ -77,25 +79,41 @@
     <div class="content">
       <h2>Palette de couleurs</h2>
       <div class="colonnes">
-        <div>
+        <div class="description">
           <p>Une description succinte relative au choix des couleurs</p>
         </div>
 
         <div>
+          <h3>Couleurs principales</h3>
           <!--       
             Simplement rentrer les couleurs ici, la chaîne est récupérée et réutilisée.
             Je passe par tinycolor, qui convertit, vous pouvez donc passer plusieurs formats.
               https://github.com/bgrins/TinyColor#accepted-string-input
           -->
           <div class="colors">
-            <div class="color" data-color="151132">Bleu nuit</div>
+            <div class="color" data-color="151132" data-declinaison="yes">Bleu nuit</div>
             <div class="color" data-color="0062c4">Bleu électrique</div>
-            <div class="color" data-color="f62080">Rose électrique</div>
+            <div class="color" data-color="f62080" data-declinaison="yes">Rose électrique</div>
             <div class="color" data-color="ffa430">Jaune orangé</div>
             <div class="color" data-color="hahaLolilol">bof</div>
           </div>
         </div>
-        <div>Déclinaisons laul</div>
+        <div class="declinaisonsColumn">
+          <h3>Déclinaisons</h3>
+          <table class="declinaisons">
+            <tr class="declinaison">
+              <td><div class="pute" style="background-color: #2a254d;">Bleu moins foncé</div></td>
+              <td>
+                <ul><li>hsl(247, 49%, 13%)</li><li>rgb(21, 17, 50)</li><li>#2a254d</li></ul>
+              </td>
+              <td>
+                <div class="pute" style="background-color: #09061b;">Bleu</div>
+              </td>
+              <td>
+                <ul><li>hsl(247, 49%, 13%)</li><li>rgb(21, 17, 50)</li><li>#09061b</li></ul>
+              </td>
+          </tr>
+        </table>
       </div>
     </div>
   </section>
