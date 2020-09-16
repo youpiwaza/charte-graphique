@@ -86,21 +86,41 @@ window.addEventListener('DOMContentLoaded', () => {
   let couleursHTML = gsap.utils.toArray('.color');
   couleursHTML.forEach(couleurHTML => {
     const couleurText = couleurHTML.textContent;
+    couleurHTML.textContent = "";
+
     const tinyCouleur = tinycolor(couleurText);
+    
+    // Crétion d'une div afin d'afficher la couleur
+    const newColorPastilleHTML = document.createElement('div');
+    newColorPastilleHTML.className = 'pastille';
+
+    /// Création d'une liste populée automatiquement
+    const newList = document.createElement('ul');
 
     // Test de la couleur fournie
     if(!tinyCouleur.isValid()) {
       // Si non valide, affichage d'une erreur
-      couleurHTML.style.backgroundColor = '#FF4136';
-      couleurHTML.style.color = '#fbfbfb';
-      couleurHTML.style.lineHeight = 'calc(60px - 1em)';
-      couleurHTML.textContent = 'Couleur invalide';
+      newColorPastilleHTML.style.backgroundColor = '#FF4136';
+      newColorPastilleHTML.style.color = '#fbfbfb';
+      newColorPastilleHTML.style.lineHeight = 'calc(55px - 1em)';
+      newColorPastilleHTML.textContent = 'Couleur invalide';
+      couleurHTML.appendChild(newColorPastilleHTML);
+
+      const newListItem = document.createElement('li');
+      const newContent  = document.createTextNode(`La couleur '${couleurText} n'est pas au bon format`);
+
+      const newListItem2 = document.createElement('li');
+      const newDiv = document.createElement('div');
+      newDiv.innerHTML = `Merci de vous référer aux 
+        <a href="https://github.com/bgrins/TinyColor#accepted-string-input" target="_blank" title="Tinycolor github">formats acceptés</a>`;
+      
+      newListItem.appendChild(newContent);
+      newList.appendChild(newListItem);
+
+      newListItem2.appendChild(newDiv);
+      newList.appendChild(newListItem2);
     }
     else {
-      // Crétion d'une div afin d'afficher la couleur
-      const newColorPastilleHTML = document.createElement('div');
-      newColorPastilleHTML.className = 'pastille';
-
       // Modifier la couleur de fond en fonction de la valeur passée en texte dans le HTML
       newColorPastilleHTML.style.backgroundColor = tinyCouleur.toHexString();
 
@@ -112,15 +132,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
       newColorPastilleHTML.textContent = tinyCouleur.toHexString();
 
-
       // Afficher CMJN RVB Hexa
       // Print CMJN / C 20 ; M 70 ; J 100 ; N 10
       // Web RGB / R 204 ; V 106 ; B 45
       // Hexadécimal / #CC6A2D
-
-      /// Création d'une liste populée automatiquement
-      const newList     = document.createElement('ul');
-
       const newListItemCMJN = document.createElement('li');
       const newContentCMJN  = document.createTextNode(tinyCouleur.toHslString());
       newListItemCMJN.appendChild(newContentCMJN);
@@ -135,12 +150,9 @@ window.addEventListener('DOMContentLoaded', () => {
       const newContentHex  = document.createTextNode(tinyCouleur.toHexString());
       newListItemHex.appendChild(newContentHex);
       newList.appendChild(newListItemHex);
-
-
-      // Et on remplace le contenu précédent
-      couleurHTML.textContent = "";
-      couleurHTML.appendChild(newColorPastilleHTML);
-      couleurHTML.appendChild(newList);
     }
+    // Et on remplace le contenu précédent
+    couleurHTML.appendChild(newColorPastilleHTML);
+    couleurHTML.appendChild(newList);
   });
 });

@@ -115,6 +115,7 @@ ul {
 .pastille {
   height: 100px;
   line-height: calc(100px - 1em);
+  min-width: 100px;
   padding: 0.5em;
   text-align: center;
   width: 100px;
