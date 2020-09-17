@@ -5,30 +5,18 @@ import { ScrollTrigger } from './js/vendors/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
 import { ScrollToPlugin } from './js/vendors/ScrollToPlugin.js';
 gsap.registerPlugin(ScrollToPlugin);
-
 // KO, import via <script>
 // import { tinycolor } from './js/vendors/tinycolor.js';
 
+import { manageFonts } from './assets/js/fonts.js';
+import { responsiveViaJs } from './assets/js/responsiveViaJs.js';
+
+
 window.addEventListener('DOMContentLoaded', () => {
-  //// Font face observer
-  // https://github.com/bramstein/fontfaceobserver
-  //                                family name declared in css @import
-  const font = new FontFaceObserver('Roboto Condensed');
-  font.load().then( () => {
-    const bodyHTML = document.getElementsByTagName('body')[0];
-    bodyHTML.classList.add('fonts-loaded');
-  });
-
-  //// Responsive JS / Prefer use _.throttle if it isn't one shot
-  // const browserWidth = window.innerWidth || document.body.clientWidth;
-
-  // style.css > @media screen and (min-width: 960px)
-  // (browserWidth < 960)
-  //   ? console.log('< 960')
-  //   : console.log('> 960');
-
-
-
+  
+  manageFonts();
+  // responsiveViaJs();
+  
   // Recupération de toutes les sections
   let sectionsHTML  = gsap.utils.toArray('section');
   // On vire la première (pas de boutons qui pointent vers elle)
