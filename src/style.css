@@ -225,12 +225,72 @@ ul {
 
 }
 
+/**** End of automatisation CSS ***/
 
 
 
+/**** Manual CSS ****/
 
+/*** Regles ***/
+.fond {
+  align-items: center;
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 100%;
+}
 
+.fond.clair {
+  background-color: #0062c4;
+}
 
+.fond.fonce {
+  background-color: #151132;
+}
+
+#regles-couleurs .couleur {
+  height: 50px ;
+  width: 50px ;
+}
+
+.couleur-fonce {
+  color: #151132;
+}
+
+.couleur1 {
+  color: #0062c4;
+}
+.couleur2 {
+  color: #f62080;
+}
+.couleur3 {
+  color: #ffa430;
+}
+
+.fond-couleur1 {
+  background-color: #0062c4;
+}
+.fond-couleur2 {
+  background-color: #f62080;
+}
+.fond-couleur3 {
+  background-color: #ffa430;
+}
+
+.fond-bright {
+  background-size: cover;
+  background-image: url('/assets/images/landscape-bright.jpg');
+}
+.fond-dark {
+  background-size: cover;
+  background-image: url('/assets/images/landscape-dark.jpg');
+}
+
+.usages .fond {
+  flex-direction: column;
+}
 
 
 
