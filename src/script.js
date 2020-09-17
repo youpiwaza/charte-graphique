@@ -1,5 +1,6 @@
 console.log('script.js');
 
+import { gsap } from '/js/vendors/index.js';
 import { ScrollTrigger } from './js/vendors/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
 import { ScrollToPlugin } from './js/vendors/ScrollToPlugin.js';
@@ -7,6 +8,7 @@ gsap.registerPlugin(ScrollToPlugin);
 // KO, import via <script>
 // import { tinycolor } from './js/vendors/tinycolor.js';
 
+import { bottomButtons }      from './assets/js/bottomButtons.js';
 import { manageFonts }        from './assets/js/fonts.js';
 // import { responsiveViaJs } from './assets/js/responsiveViaJs.js';
 import { bottomButtons }      from './assets/js/bottomButtons.js';
@@ -23,7 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
   //// Générations automatiques des éléments de navigation
   bottomButtons(sectionsHTML);
   
-
   /// Génération des liens du sommaire
   // On vire la page sommaire des sections
   const cloneSectionsPourSommaire = sectionsHTML.slice(1);
