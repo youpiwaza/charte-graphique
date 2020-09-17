@@ -1,4 +1,4 @@
-console.log('responsiveViaJs.js');
+console.log('responsive.js');
 
 // export function responsiveViaJs() { }
 
