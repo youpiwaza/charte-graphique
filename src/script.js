@@ -111,6 +111,9 @@ window.addEventListener('DOMContentLoaded', () => {
       newColorPastilleHTML.textContent = 'Couleur invalide';
       couleurHTML.appendChild(newColorPastilleHTML);
 
+      // Ajustement de la taille de police
+      couleurHTML.classList.add('small-font');
+
       const newListItem = document.createElement('li');
       const newContent  = document.createTextNode(`La couleur '${couleurText} n'est pas au bon format`);
 
