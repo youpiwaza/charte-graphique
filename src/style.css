@@ -106,6 +106,10 @@ ul {
   display: none;
 }
 
+.hidden-mobile {
+  display: none;
+}
+
 .small-font {
   font-size: .8em;
 }
@@ -148,7 +152,11 @@ ul {
     flex-direction: row;
     justify-content: space-evenly;
     width: 80vw;
-  }  
+  }
+
+  .hidden-mobile {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -188,12 +196,16 @@ ul {
   font-size: .8em;
 }
 
-.pute {
-  color: white;
-  height: 70px;
-  width: 70px;
-  padding: .5em;
-  min-width: 70px;
+/* Correct vertical align */
+.declinaison td:first-child {
+  padding: 15px 0;
+}
+
+.pastille-small {
   display: table-cell;
+  height: 70px;
+  min-width: 70px;
+  padding: .5em;
   vertical-align: middle;
+  width: 70px;
 }

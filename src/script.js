@@ -161,12 +161,12 @@ window.addEventListener('DOMContentLoaded', () => {
       newList.appendChild(newListItemHex);
 
       /// Gestion de la colonne déclinaison
-      const isDeclinsaison = couleurHTML.dataset.declinaison;
+      const isDeclinaison = couleurHTML.dataset.declinaison;
       if( //dem users x')
-        isDeclinsaison === 'ok' || 
-        isDeclinsaison === 'yes' || 
-        isDeclinsaison === 'oui' || 
-        isDeclinsaison === 'true' 
+        isDeclinaison === 'ok' || 
+        isDeclinaison === 'yes' || 
+        isDeclinaison === 'oui' || 
+        isDeclinaison === 'true' 
       ) {
         // At least one must be set for the column to be displayed
         isDeclinaisonColumn = true;
@@ -180,13 +180,66 @@ window.addEventListener('DOMContentLoaded', () => {
   //// Gestion de la déclinaison des couleurs
   // Si pas de déclinaison, on masque la colonne
   if(!isDeclinaisonColumn) {
-    console.log('if(!isDeclinaisonColumn) {')
+    // console.log('if(!isDeclinaisonColumn)');
     const declinaisonsContainer = document.querySelector('.declinaisonsColumn');
     declinaisonsContainer.classList.add('hidden');
   }
   else {
-    // Sinon, on la remplit
-    console.log('if(isDeclinaisonColumn) {')
+    // Sinon, on la crée et on la remplit
+    // console.log('if(isDeclinaisonColumn) {');
+    let declinaisonsHTML = document.createElement('div');
+    declinaisonsHTML.classList.add('declinaisonsColumn');
 
+    let declinaisonsHTMLText = `
+      <h3>Déclinaisons</h3>
+      <table class="declinaisons small-font">
+    `;
+
+    // Pour chaque couleur
+    couleursHTML.forEach(couleurHTML => {
+      const isDeclinaison = couleurHTML.dataset.declinaison;
+
+      // Si la déclinaison est demandée
+      if( //dem users x')
+        isDeclinaison === 'ok' || 
+        isDeclinaison === 'yes' || 
+        isDeclinaison === 'oui' || 
+        isDeclinaison === 'true' 
+      ) {
+        // On crée le HTML demandé
+        // La div .small-pastille est nécessaire, la taille du tableau s'adapte à son contenu
+        declinaisonsHTMLText += `
+          <tr class="declinaison">
+            <td><div class="pastille-small" style="background-color: #2a254d;">Bleu moins foncé</div></td>
+            <td>
+              <ul><li>hsl(247, 49%, 13%)</li><li>rgb(21, 17, 50)</li><li>#2a254d</li></ul>
+            </td>
+            <td>
+              <div class="pastille-small" style="background-color: #09061b;">Bleu</div>
+            </td>
+            <td>
+              <ul><li>hsl(247, 49%, 13%)</li><li>rgb(21, 17, 50)</li><li>#09061b</li></ul>
+            </td>
+          </tr>
+        `;
+      }
+      // Sinon
+      else {
+        // On rajoute une case vide dans le tableau, afin que l'alginement corresponde
+        // Les cases vides seront masquées en CSS (empilement > pas besoin d'alignement horizontal)
+        declinaisonsHTMLText += `
+          <tr class="declinaison hidden-mobile">
+            <td colspan="4"><div class="pastille-small"></div></td>
+          </tr>
+        `;
+      }
+    });
+    // Une fois toutes les déclinaisons ajoutées..
+    declinaisonsHTMLText += '</table>';
+    declinaisonsHTML.innerHTML = declinaisonsHTMLText;
+
+    // On rajoute l'ensemble des déclinaisons au html
+    let declinaisonsColumnHTML = document.querySelector('.declinaisonsColumn');
+    declinaisonsColumnHTML.appendChild(declinaisonsHTML);
   }
 });
