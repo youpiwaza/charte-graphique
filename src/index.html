@@ -99,6 +99,30 @@
             <div class="color" data-color="ffa430">Jaune orangé</div>
             <div class="color" data-color="hahaLolilol">bof</div>
           </div>
+          <!-- 
+            Note :
+              Des classes CSS seront générées automatiquement pour la couleur de fond, et de texte
+              Pour l'ensemble des couleurs et de leurs déclinsaisons, cf. style.css pour un exemple plus détaillé
+              Exemple : 
+                .bg-color1 {
+                  background-color: #151132;
+                }
+                .color1 {
+                  color: #151132;
+                }
+                .bg-color1-brighter {
+                  background-color: #2e2a4b;
+                }
+                .color1-brighter {
+                  color: #2e2a4b;
+                }
+                .bg-color1-darker {
+                  background-color: #05040c;
+                }
+                .color1-darker {
+                  color: #05040c;
+                }
+          -->
         </div>
         <!-- Remplie ou masquée automatiquement en fonction des attributs data-declinaison des couleurs -->
         <div class="declinaisonsColumn">
@@ -113,33 +137,33 @@
         <div class="recommandations">
           <h3>Recommandations ✅</h3>
           <p>Utiliser les couleurs vive sur un fond foncé</p>
-          <div class="fond fonce">
-            <div class="couleur fond-couleur1"></div>
-            <div class="couleur fond-couleur2"></div>
-            <div class="couleur fond-couleur3"></div>
+          <div class="fond bg-color1">
+            <div class="couleur bg-color2"></div>
+            <div class="couleur bg-color3"></div>
+            <div class="couleur bg-color4"></div>
           </div>
         </div>
         <div class="interdits">
           <h3>Interdits ⛔</h3>
           <p>Couleurs vives uniquement : aggressif, manque de contraste</p>
-          <div class="fond clair">
-            <div class="couleur fond-couleur2"></div>
-            <div class="couleur fond-couleur3"></div>
+          <div class="fond bg-color2">
+            <div class="couleur bg-color3"></div>
+            <div class="couleur bg-color4"></div>
           </div>
         </div>
         <div class="usages">
           <h3>Usages sur visuels 🖼️</h3>
           <p>Fond clairs > Utiliser la couleur foncée</p>
-          <div class="fond fond-bright">
-            <div class="couleur1">Some Text ⛔</div>
-            <div class="couleur-fonce">Some Text ✅</div>
-            <div class="couleur3">Some Text ⛔</div>
+          <div class="fond fond-img-bright">
+            <div class="color4">Some Text ⛔</div>
+            <div class="color1">Some Text ✅</div>
+            <div class="color3">Some Text ⛔</div>
           </div>
           <p>Fond foncés > Utiliser une couleur claire d'un ton différent</p>
-          <div class="fond fond-dark">
-            <div class="couleur1">Some Text ⛔</div>
-            <div class="couleur2">Some Text ✅</div>
-            <div class="couleur3">Some Text ✅</div>
+          <div class="fond fond-img-dark">
+            <div class="color2">Some Text ⛔</div>
+            <div class="color3">Some Text ✅</div>
+            <div class="color4">Some Text ✅</div>
           </div>
         </div>
       </div>

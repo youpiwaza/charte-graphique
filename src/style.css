@@ -242,48 +242,79 @@ ul {
   width: 100%;
 }
 
-.fond.clair {
-  background-color: #0062c4;
-}
-
-.fond.fonce {
-  background-color: #151132;
-}
-
 #regles-couleurs .couleur {
   height: 50px ;
   width: 50px ;
 }
 
-.couleur-fonce {
-  color: #151132;
-}
+/*
+Note :
+  Des classes sont générées automatiquement, relatives aux couleurs et à leurs déclinaisons,
+  Pour la couleur du texte, mais également des fonds
+  Exemple de classes générées : 
 
-.couleur1 {
-  color: #0062c4;
-}
-.couleur2 {
-  color: #f62080;
-}
-.couleur3 {
-  color: #ffa430;
-}
+  <style>
+    .bg-color1 {
+      background-color: #151132;
+    }
+    .color1 {
+      color: #151132;
+    }
+  
+    .bg-color2 {
+      background-color: #0062c4;
+    }
+    .color2 {
+      color: #0062c4;
+    }
+  
+    .bg-color3 {
+      background-color: #f62080;
+    }
+    .color3 {
+      color: #f62080;
+    }
+  
+    .bg-color4 {
+      background-color: #ffa430;
+    }
+    .color4 {
+      color: #ffa430;
+    }
+  
+    .bg-color1-brighter {
+      background-color: #2e2a4b;
+    }
+    .color1-brighter {
+      color: #2e2a4b;
+    }
+    .bg-color1-darker {
+      background-color: #05040c;
+    }
+    .color1-darker {
+      color: #05040c;
+    }
+  
+    .bg-color1-brighter {
+      background-color: #ff3999;
+    }
+    .color1-brighter {
+      color: #ff3999;
+    }
+    .bg-color1-darker {
+      background-color: #da0967;
+    }
+    .color1-darker {
+      color: #da0967;
+    }
+  </style>
+*/
 
-.fond-couleur1 {
-  background-color: #0062c4;
-}
-.fond-couleur2 {
-  background-color: #f62080;
-}
-.fond-couleur3 {
-  background-color: #ffa430;
-}
-
-.fond-bright {
+.fond-img-bright {
   background-size: cover;
   background-image: url('/assets/images/landscape-bright.jpg');
 }
-.fond-dark {
+.fond-img-dark {
   background-size: cover;
   background-image: url('/assets/images/landscape-dark.jpg');
 }

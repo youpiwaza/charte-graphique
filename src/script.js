@@ -84,8 +84,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //// Gestion des couleurs
   let couleursHTML = gsap.utils.toArray('.colors .color');
-  // Need at least one declinaison
+  // Need at least one declinaison for the column to show, let's count 'em
   let isDeclinaisonColumn = false;
+
+  // Dynamic generation of CSS custom classes with provided colors
+  let chaineCustomCss     = `<style>`;
+  let customCssColorIndex = 1;
 
   couleursHTML.forEach(couleurHTML => {
     const labelCouleur  = couleurHTML.textContent;
@@ -102,9 +106,10 @@ window.addEventListener('DOMContentLoaded', () => {
     /// Création d'une liste populée automatiquement
     const newList = document.createElement('ul');
 
-    // Test de la couleur fournie
+    /// Test de la couleur fournie
+    // Si non valide
     if(!tinyCouleur.isValid()) {
-      // Si non valide, affichage d'une erreur
+      // Affichage d'une erreur pour cette couleur
       newColorPastilleHTML.style.backgroundColor = '#FF4136';
       newColorPastilleHTML.style.color = '#fbfbfb';
       newColorPastilleHTML.style.lineHeight = 'calc(55px - 1em)';
@@ -173,6 +178,17 @@ window.addEventListener('DOMContentLoaded', () => {
         // At least one must be set for the column to be displayed
         isDeclinaisonColumn = true;
       }
+
+      /// Generate custom CSS classes
+      chaineCustomCss += `
+        .bg-color${customCssColorIndex} {
+          background-color: ${tinyCouleur.toHexString()};
+        }
+        .color${customCssColorIndex} {
+          color: ${tinyCouleur.toHexString()};
+        }
+      `;
+      customCssColorIndex++;
     }
     // On ajoute le contenu au html
     couleurHTML.appendChild(newColorPastilleHTML);
@@ -197,6 +213,9 @@ window.addEventListener('DOMContentLoaded', () => {
       <table class="declinaisons small-font">
     `;
 
+    // Reset custom css classes counter
+    customCssColorIndex = 1;
+
     // Pour chaque couleur
     couleursHTML.forEach(couleurHTML => {
       const labelCouleur  = couleurHTML.querySelector('.pastille').textContent;
@@ -204,7 +223,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const tinyCouleur   = tinycolor(couleurText);
       const isDeclinaison = couleurHTML.dataset.declinaison;
 
-      // Si la déclinaison est demandée
+      // Si la déclinaison est demandée, et que la couleur est valide
       if( //dem users x')
         ( isDeclinaison === 'ok' || 
           isDeclinaison === 'yes' || 
@@ -250,6 +269,22 @@ window.addEventListener('DOMContentLoaded', () => {
             </td>
           </tr>
         `;
+
+        /// Generate custom CSS classes
+        chaineCustomCss += `
+          .bg-color${customCssColorIndex}-brighter {
+            background-color: ${brighter.toHexString()};
+          }
+          .color${customCssColorIndex}-brighter {
+            color: ${brighter.toHexString()};
+          }
+          .bg-color${customCssColorIndex}-darker {
+            background-color: ${darker.toHexString()};
+          }
+          .color${customCssColorIndex}-darker {
+            color: ${darker.toHexString()};
+          }
+        `;
       }
       // Sinon
       else {
@@ -269,5 +304,11 @@ window.addEventListener('DOMContentLoaded', () => {
     // On rajoute l'ensemble des déclinaisons au html
     let declinaisonsColumnHTML = document.querySelector('.declinaisonsColumn');
     declinaisonsColumnHTML.appendChild(declinaisonsHTML);
+
+    // Add custom CSS to HTML
+    chaineCustomCss += `</style>`;
+
+    let headHTML = document.querySelector('head');
+    headHTML.innerHTML += chaineCustomCss;
   }
 });
