@@ -88,12 +88,12 @@ window.addEventListener('DOMContentLoaded', () => {
   let isDeclinaisonColumn = false;
 
   couleursHTML.forEach(couleurHTML => {
-    const labelCouleur = couleurHTML.textContent;
-    const couleurText = couleurHTML.dataset.color;
+    const labelCouleur  = couleurHTML.textContent;
+    const couleurText   = couleurHTML.dataset.color;
+    const tinyCouleur   = tinycolor(couleurText);
+    
     // On supprime le contenu précédent
     couleurHTML.textContent = "";
-
-    const tinyCouleur = tinycolor(couleurText);
     
     // Crétion d'une div afin d'afficher la couleur
     const newColorPastilleHTML = document.createElement('div');
@@ -120,10 +120,12 @@ window.addEventListener('DOMContentLoaded', () => {
       const newListItem2 = document.createElement('li');
       const newDiv = document.createElement('div');
       newDiv.innerHTML = `Merci de vous référer aux 
-        <a href="https://github.com/bgrins/TinyColor#accepted-string-input" target="_blank" title="Tinycolor github">formats acceptés</a>`;
+      <a href="https://github.com/bgrins/TinyColor#accepted-string-input" target="_blank" title="Tinycolor github">formats acceptés</a>`;
       
       newListItem.appendChild(newContent);
       newList.appendChild(newListItem);
+      newList.style.display = 'table-cell';
+      newList.style.verticalAlign = 'middle';
 
       newListItem2.appendChild(newDiv);
       newList.appendChild(newListItem2);
@@ -197,28 +199,54 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Pour chaque couleur
     couleursHTML.forEach(couleurHTML => {
+      const labelCouleur  = couleurHTML.querySelector('.pastille').textContent;
+      const couleurText   = couleurHTML.dataset.color;
+      const tinyCouleur   = tinycolor(couleurText);
       const isDeclinaison = couleurHTML.dataset.declinaison;
 
       // Si la déclinaison est demandée
       if( //dem users x')
-        isDeclinaison === 'ok' || 
-        isDeclinaison === 'yes' || 
-        isDeclinaison === 'oui' || 
-        isDeclinaison === 'true' 
+        ( isDeclinaison === 'ok' || 
+          isDeclinaison === 'yes' || 
+          isDeclinaison === 'oui' || 
+          isDeclinaison === 'true' 
+        ) && tinyCouleur.isValid()
       ) {
+        // On génère les valeurs des déclinaisons
+        const brighter  = tinycolor(couleurText).brighten();
+        const darker    = tinycolor(couleurText).darken();
+
+        let textColor = '';
+        if(tinyCouleur.isDark()) {
+          textColor = ' color: #fbfbfb;';
+        }
+
         // On crée le HTML demandé
         // La div .small-pastille est nécessaire, la taille du tableau s'adapte à son contenu
         declinaisonsHTMLText += `
           <tr class="declinaison">
-            <td><div class="pastille-small" style="background-color: #2a254d;">Bleu moins foncé</div></td>
             <td>
-              <ul><li>hsl(247, 49%, 13%)</li><li>rgb(21, 17, 50)</li><li>#2a254d</li></ul>
+              <ul>
+                <li>${ brighter.toHslString() }</li>
+                <li>${ brighter.toRgbString() }</li>
+                <li>${ brighter.toHexString() }</li>
+              </ul>
             </td>
             <td>
-              <div class="pastille-small" style="background-color: #09061b;">Bleu</div>
+              <div class="pastille-small" style="background-color: ${ brighter.toHexString() };${ textColor }">Plus clair</div>
             </td>
             <td>
-              <ul><li>hsl(247, 49%, 13%)</li><li>rgb(21, 17, 50)</li><li>#09061b</li></ul>
+              <div class="pastille-small" style="background-color: ${ tinyCouleur.toHexString() };${ textColor }">${ labelCouleur }</div>
+            </td>
+            <td>
+              <div class="pastille-small" style="background-color: ${ darker.toHexString() };${ textColor }">Plus foncé</div>
+            </td>
+            <td>
+              <ul>
+                <li>${ darker.toHslString() }</li>
+                <li>${ darker.toRgbString() }</li>
+                <li>${ darker.toHexString() }</li>
+              </ul>
             </td>
           </tr>
         `;

@@ -139,11 +139,46 @@ ul {
 
 #couleurs ul {
   list-style-type: none;
-  padding-left: 1em;
+  padding-left: .5em;
 }
 
 #couleurs .description {
   margin-right: 1em;
+}
+
+/* Déclinaisons */
+#declinaisons {
+  height: 100px; /* Même taille que l'autre */
+  width: 100%;
+}
+
+.declinaisons {
+  border-collapse: collapse;
+}
+
+.declinaison td {
+  font-size: .8em;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.declinaison td:first-child ul {
+  padding-left: 0;
+  padding-right: .5em;
+}
+
+/* Correct vertical align */
+.declinaison td:first-child {
+  padding: 8px 0;
+}
+
+.pastille-small {
+  display: table-cell;
+  height: 50px;
+  min-width: 50px;
+  vertical-align: middle;
+  width: 50px;
 }
 
 /* ~Responsive */
@@ -154,8 +189,24 @@ ul {
     width: 80vw;
   }
 
+  #couleurs ul {
+    padding-left: 1em;
+  }
+
+  .declinaison td:first-child ul {
+    padding-left: 0;
+    padding-right: 1em;
+  }
+
   .hidden-mobile {
     display: block;
+  }
+
+  .pastille-small {
+    height: 70px;
+    min-width: 70px;
+    padding: .5em;
+    width: 70px;
   }
 }
 
@@ -184,28 +235,3 @@ ul {
 
 
 
-#declinaisons {
-  height: 100px; /* Même taille que l'autre */
-  width: 100%;
-}
-
-
-.declinaison td {
-  text-align: center;
-  vertical-align: middle;
-  font-size: .8em;
-}
-
-/* Correct vertical align */
-.declinaison td:first-child {
-  padding: 15px 0;
-}
-
-.pastille-small {
-  display: table-cell;
-  height: 70px;
-  min-width: 70px;
-  padding: .5em;
-  vertical-align: middle;
-  width: 70px;
-}
