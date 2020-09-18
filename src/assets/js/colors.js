@@ -11,6 +11,7 @@ export function colors() {
   let chaineCustomCss     = `<style>`;
   let customCssColorIndex = 1;
 
+  /// Génération des pastilles
   couleursHTML.forEach(couleurHTML => {
     const labelCouleur  = couleurHTML.textContent;
     const couleurText   = couleurHTML.dataset.color;
@@ -115,7 +116,7 @@ export function colors() {
     couleurHTML.appendChild(newList);
   });
 
-  //// Gestion de la déclinaison des couleurs
+  //// Gestion des déclinaisons des couleurs
   // Si pas de déclinaison, on masque la colonne
   if(!isDeclinaisonColumn) {
     // console.log('if(!isDeclinaisonColumn)');
