@@ -2,6 +2,16 @@
 /* Fonts import
  * https://google-webfonts-helper.herokuapp.com/fonts/roboto-condensed
  * https://github.com/bramstein/fontfaceobserver
+ *
+ * Change font :
+ *  1. Go to google webfont and choose a font
+ *  2. Go to heroku and re-select the same font : https://google-webfonts-helper.herokuapp.com/fonts/
+ *  3. Go to the bottom of the page and download the font files
+ *  4. Copy them in the /assets/fonts/ folder
+ *  5. Copy css provided below
+ *  6. Adapt urls (add /assets/, etc.) tu match the place whe you put the font files
+ *  7. Change font names in style.css (this file) ~line 70
+ *  8. Don't forget to adapt /assets/js/fonts.js, for improved loading
 */
 @font-face {
   font-display: swap;
@@ -15,6 +25,36 @@
       url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
       url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
       url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/shadows-into-light?subsets=latin */
+/* shadows-into-light-regular - latin */
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/shadows-into-light-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'),
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.svg#ShadowsIntoLight') format('svg'); /* Legacy iOS */
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/press-start-2p?subsets=latin */
+/* press-start-2p-regular - latin */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
 }
 
 /* Basic css */
@@ -39,8 +79,24 @@ body {
   text-align: center;
 }
 
-body.fonts-loaded {
+body.font1-loaded h1,
+body.font1-loaded h2,
+body.font1-loaded h3,
+body.font1-loaded h4,
+body.font1-loaded h5,
+body.font1-loaded h6,
+/* You can override font choices thourgh local classes */
+body.font1-loaded, .font1
+{
+  font-family: 'Shadows Into Light', Arial, sans-serif;
+}
+
+body.font2-loaded, .font2 {
   font-family: 'Roboto Condensed', Arial, sans-serif;
+}
+
+body.font3-loaded, .font3 {
+  font-family: 'Press Start 2P', Arial, sans-serif;
 }
 
 h1, h2, h3 {
@@ -79,6 +135,11 @@ ul {
   text-align: left;
 }
 
+p {
+  /* word-break: break-all; */
+  word-break: break-word;
+}
+
 .button-down {
   background: #DCDCDC;
   border: 0;
@@ -114,6 +175,13 @@ ul {
   font-size: .8em;
 }
 
+.text-justify {
+  text-align: justify;
+}
+.text-left {
+  text-align: left;
+}
+
 
 /*** Projet ***/
 .colonnes {
@@ -121,6 +189,9 @@ ul {
   flex-direction: column;
 }
 
+.colonnes > div {
+  padding: .5em;
+}
 
 /** Couleurs **/
 .color {
@@ -189,6 +260,13 @@ ul {
     width: 80vw;
   }
 
+  .mx-width-half {
+    max-width: 50%;
+  }
+
+
+
+  /*** Projet ***/
   #couleurs ul {
     padding-left: 1em;
   }
