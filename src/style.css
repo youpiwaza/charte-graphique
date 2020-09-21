@@ -149,6 +149,9 @@ ul {
 }
 
 
+.bg-transparent {
+  background-color: rgba(0,0,0,0);
+}
 
 .button-down {
   background: #DCDCDC;
@@ -506,6 +509,7 @@ Note :
 
 .menu-desktop {
   height: 70px;
+  max-width: 100%;
   width: 100%;
 }
 .menu-desktop ul {
@@ -548,10 +552,122 @@ Note :
 }
 
 @media screen and (min-width: 620px) {
+  .menu-desktop {
+    overflow: initial;
+  }
   .menu-footer .first-row {
     flex-direction: row;
   }
   .menu-footer h4 {
     margin-top: 1em;
   }
+}
+
+
+.social {
+  font-size: 1.5em;
+  padding: .5em;
+}
+
+.boutons .line {
+  padding: 0.5em;
+}
+.btn {
+  background-color: rgba(0,0,0,0);
+  padding: 0.2em 0.4em;
+}
+.btn1 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #151132;
+  color: #151132;
+}
+.btn1:hover {
+  background-color: #151132;
+  color: #fbfbfb;
+}
+
+.btn2 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #0062c4;
+  color: #0062c4;
+}
+.btn2:hover {
+  background-color: #0062c4;
+  color: #151132;
+}
+
+.btn3 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #f62080;
+  color: #f62080;
+}
+.btn3:hover {
+  background-color: #f62080;
+  color: #151132;
+}
+
+.btn4 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #ffa430;
+  color: #ffa430;
+}
+.btn4:hover {
+  background-color: #ffa430;
+  color: #151132;
+}
+
+.btn5 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #0062c4;
+  color: #0062c4;
+}
+.btn5:hover {
+  background-color: #0062c4;
+  color: #151132;
+}
+
+.btn6 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #f62080;
+  color: #f62080;
+}
+.btn6:hover {
+  background-color: #f62080;
+  color: #151132;
+}
+
+.btn7 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #ffa430;
+  color: #ffa430;
+}
+.btn7:hover {
+  background-color: #ffa430;
+  color: #151132;
+}
+
+.formulaires form {
+  padding: 1em 0.5em;
+}
+.formulaires label {
+  margin-right: 0.5em;
+}
+.formulaires td {
+  text-align: left;
+}
+.formulaires td:first-child {
+  text-align: right;
+}
+/*.formulaires*/ input {
+  border: 2px solid #0062c4;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+}
+/*.formulaires*/ .dark input {
+  border-color: #ffa430;
+  background-color: #2e2a4b;
+  color: #f62080;
+}
+/*.formulaires*/ button {
+  padding: 0.2em 0.4em;
 }
