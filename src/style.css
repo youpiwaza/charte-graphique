@@ -86,16 +86,16 @@ body.font1-loaded h4,
 body.font1-loaded h5,
 body.font1-loaded h6,
 /* You can override font choices thourgh local classes */
-body.font1-loaded, .font1
+.font1
 {
   font-family: 'Shadows Into Light', Arial, sans-serif;
 }
 
-body.font2-loaded, .font2 {
+body.font2-loaded .font2, .font2 {
   font-family: 'Roboto Condensed', Arial, sans-serif;
 }
 
-body.font3-loaded, .font3 {
+body.font3-loaded .font3 {
   font-family: 'Press Start 2P', Arial, sans-serif;
 }
 
@@ -303,28 +303,6 @@ p {
 
 }
 
-/**** End of automatisation CSS ***/
-
-
-
-/**** Manual CSS ****/
-
-/*** Regles ***/
-.fond {
-  align-items: center;
-  display: flex;
-  font-size: 2em;
-  font-weight: bold;
-  justify-content: space-evenly;
-  height: 200px;
-  width: 100%;
-}
-
-#regles-couleurs .couleur {
-  height: 50px ;
-  width: 50px ;
-}
-
 /*
 Note :
   Des classes sont générées automatiquement, relatives aux couleurs et à leurs déclinaisons,
@@ -387,6 +365,28 @@ Note :
     }
   </style>
 */
+
+/**** End of automatisation CSS ***/
+
+
+
+/**** Manual CSS ****/
+
+/*** Regles ***/
+.fond {
+  align-items: center;
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 100%;
+}
+
+#regles-couleurs .couleur {
+  height: 50px ;
+  width: 50px ;
+}
 
 .fond-img-bright {
   background-size: cover;

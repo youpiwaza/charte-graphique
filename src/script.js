@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollToPlugin);
 
 import { bottomButtons }      from './assets/js/bottomButtons.js';
 import { colors }             from './assets/js/colors.js';
-import { manageFonts }        from './assets/js/fonts.js';
+import { fonts }              from './assets/js/fonts.js';
 // import { responsiveViaJs } from './assets/js/responsiveViaJs.js';
 import { summary }            from './assets/js/summary.js';
 
@@ -18,7 +18,7 @@ import { summary }            from './assets/js/summary.js';
 window.addEventListener('DOMContentLoaded', () => {
   
   // Classic stuff : fonts & responsive
-  manageFonts();
+  fonts();
   // responsiveViaJs();
   
   // Recupération de toutes les sections
