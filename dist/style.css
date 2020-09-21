@@ -1,0 +1,673 @@
+/*! /src/style.css */
+/* Fonts import
+ * https://google-webfonts-helper.herokuapp.com/fonts/roboto-condensed
+ * https://github.com/bramstein/fontfaceobserver
+ *
+ * Change font :
+ *  1. Go to google webfont and choose a font
+ *  2. Go to heroku and re-select the same font : https://google-webfonts-helper.herokuapp.com/fonts/
+ *  3. Go to the bottom of the page and download the font files
+ *  4. Copy them in the /assets/fonts/ folder
+ *  5. Copy css provided below
+ *  6. Adapt urls (add /assets/, etc.) to match the place where you put the font files
+ *  7. Change font names in style.css (this file) ~line 70 according to your needs
+ *  8. Don't forget to adapt /assets/js/fonts.js, for improved loading
+ *  9. In the "font" section, update links towards google web fonts
+*/
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
+      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/shadows-into-light?subsets=latin */
+/* shadows-into-light-regular - latin */
+@font-face {
+  font-family: 'Shadows Into Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/shadows-into-light-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Shadows Into Light'), local('ShadowsIntoLight'),
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.svg#ShadowsIntoLight') format('svg'); /* Legacy iOS */
+}
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/press-start-2p?subsets=latin */
+/* press-start-2p-regular - latin */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
+}
+
+/* Basic css */
+* {
+  box-sizing: border-box;
+  transition: all .5s;
+}
+
+a,
+a:active
+/*,a:visited*/
+{
+  color: #ff833b;
+  cursor: pointer;
+}
+a:hover {
+  color: #ff9659;
+}
+
+body {
+  /* https://www.transparenttextures.com/ */
+  /* background: url('assets/images/bg.png') repeat; */
+  background-color: #fbfbfb;
+  color: #303030;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  justify-content: center;
+  line-height: 1.4em;
+  min-height: 100vh;
+  padding: 0.5em;
+  text-align: center;
+}
+
+/*
+body.font1-loaded h1,
+body.font1-loaded h2,
+body.font1-loaded h3,
+body.font1-loaded h4,
+body.font1-loaded h5,
+body.font1-loaded h6,
+*/
+/* You can override font choices thourgh local classes */
+.font1
+{
+  font-family: 'Shadows Into Light', Arial, sans-serif;
+}
+
+body.font2-loaded .font2, .font2 {
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+}
+
+body.font3-loaded .font3 {
+  font-family: 'Press Start 2P', Arial, sans-serif;
+}
+
+footer {
+  padding-top: 0.5em;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+p {
+  /* word-break: break-all; */
+  word-break: break-word;
+}
+
+section {
+  align-items: center;
+  border-bottom: 1px solid #303030;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+ul {
+  text-align: left;
+}
+
+
+.bg-transparent {
+  background-color: rgba(0,0,0,0);
+}
+
+.button-down {
+  background: #DCDCDC;
+  border: 0;
+  border-radius: 100%;
+  bottom: 15px;
+  cursor: pointer;
+  height: 30px;
+  left: 50%;
+  line-height: 30px;
+  outline: none;
+  position: absolute;
+  transform: translateX(-50%);
+  vertical-align: middle;
+  width: 30px;
+}
+.button-down:hover {
+  background: #A9A9A9;
+}
+.button-down:active, .button-down:focus {
+  background: #303030;
+  color: #fbfbfb;
+}
+
+.centre-a-l-ancienne {
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-mobile {
+  display: none;
+}
+
+.posr {
+  position: relative;
+}
+
+.small-font {
+  font-size: .8em;
+}
+
+.text-justify {
+  text-align: justify;
+}
+.text-left {
+  text-align: left;
+}
+
+
+
+/*** Projet ***/
+.colonnes {
+  display: flex;
+  flex-direction: column;
+}
+
+.colonnes > div {
+  padding: .5em;
+}
+
+/** Couleurs **/
+.color {
+  display: table;
+}
+
+.pastille {
+  height: 100px;
+  display: table-cell;
+  min-width: 100px;
+  padding: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+  width: 100px;
+}
+
+#couleurs ul {
+  list-style-type: none;
+  padding-left: .5em;
+}
+
+#couleurs .description {
+  margin-right: 1em;
+}
+
+/* Déclinaisons */
+#declinaisons {
+  height: 100px; /* Même taille que l'autre */
+  width: 100%;
+}
+
+.declinaisons {
+  border-collapse: collapse;
+}
+
+.declinaison td {
+  font-size: .8em;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.declinaison td:first-child ul {
+  padding-left: 0;
+  padding-right: .5em;
+}
+
+/* Correct vertical align */
+.declinaison td:first-child {
+  padding: 8px 0;
+}
+
+.pastille-small {
+  display: table-cell;
+  height: 50px;
+  min-width: 50px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+/* Prevent overflow */
+.menu {
+  overflow: hidden;
+}
+
+/* ~Responsive */
+@media screen and (min-width: 620px) {
+  .colonnes {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80vw;
+  }
+  .colonnes > div {
+    max-width: 50%;
+  }
+
+  .mx-width-half {
+    max-width: 50%;
+  }
+
+
+
+  /*** Projet ***/
+  #couleurs ul {
+    padding-left: 1em;
+  }
+
+  .declinaison td:first-child ul {
+    padding-left: 0;
+    padding-right: 1em;
+  }
+
+  .hidden-mobile {
+    display: block;
+  }
+
+  .pastille-small {
+    height: 70px;
+    min-width: 70px;
+    padding: .5em;
+    width: 70px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    padding: 1em;
+  }
+
+  footer {
+    padding-top: 1em;
+  }
+  
+}
+
+@media screen and (min-width: 1280px) {
+
+}
+
+/*
+Note :
+  Des classes sont générées automatiquement, relatives aux couleurs et à leurs déclinaisons,
+  Pour la couleur du texte, mais également des fonds
+  Exemple de classes générées : 
+
+  <style>
+    .bg-color1 {
+      background-color: #151132;
+    }
+    .color1 {
+      color: #151132;
+    }
+  
+    .bg-color2 {
+      background-color: #0062c4;
+    }
+    .color2 {
+      color: #0062c4;
+    }
+  
+    .bg-color3 {
+      background-color: #f62080;
+    }
+    .color3 {
+      color: #f62080;
+    }
+  
+    .bg-color4 {
+      background-color: #ffa430;
+    }
+    .color4 {
+      color: #ffa430;
+    }
+  
+    .bg-color1-brighter {
+      background-color: #2e2a4b;
+    }
+    .color1-brighter {
+      color: #2e2a4b;
+    }
+    .bg-color1-darker {
+      background-color: #05040c;
+    }
+    .color1-darker {
+      color: #05040c;
+    }
+  
+    .bg-color1-brighter {
+      background-color: #ff3999;
+    }
+    .color1-brighter {
+      color: #ff3999;
+    }
+    .bg-color1-darker {
+      background-color: #da0967;
+    }
+    .color1-darker {
+      color: #da0967;
+    }
+  </style>
+*/
+
+/**** End of automatisation CSS ***/
+
+
+
+/**** Manual CSS ****/
+
+/*** Regles ***/
+.fond {
+  align-items: center;
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 100%;
+}
+
+#regles-couleurs .couleur {
+  height: 50px ;
+  width: 50px ;
+}
+
+.fond-img-bright {
+  background-size: cover;
+  background-image: url('/assets/images/landscape-bright.jpg');
+}
+.fond-img-dark {
+  background-size: cover;
+  background-image: url('/assets/images/landscape-dark.jpg');
+}
+
+.usages .fond {
+  flex-direction: column;
+}
+
+
+/*** Web components ***/
+.menu-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50px;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-menu-mobile {
+  border: none;
+  cursor: pointer;
+  font-size: 2em;
+  height: 50px;
+  width: 50px;
+}
+.menu-mobile .btn-menu-mobile:hover {
+  background-color: #f62080; 
+}
+.menu-mobile .btn-menu-mobile:focus {
+  background-color: #ffa430;
+}
+.menu-mobile div {
+  align-self: center;
+  font-size: 1.5em;
+  padding-left: 50px;
+  text-transform: uppercase;
+  width: calc(100% - 50px);
+}
+
+.menu {
+  position: relative;
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style:none;
+  margin: 0px;
+  padding: 0px;
+}
+.menu a {
+  display: block;
+  line-height: 70px;
+  font-size: 1.4em;
+  padding: 0 1em;
+  text-align:center;
+  text-decoration: none;
+}
+.menu a:hover {
+  background-color: #2e2a4b; /* Lighter blue */
+}
+.cursor-pointer {
+  color: white;
+  font-size: 2.5em;
+  position: absolute;
+  text-shadow: 2px 2px 2px black;
+}
+
+.menu-mobile-deplie {
+  height: 400px;
+  max-width: 300px;
+}
+.menu-mobile-deplie ul {
+  flex-direction : column;
+  height: 100%;
+}
+.menu-mobile-deplie .cursor-pointer {
+  left: 70%;
+  top: 70%;
+}
+
+.menu-desktop {
+  height: 70px;
+  max-width: 100%;
+  width: 100%;
+}
+.menu-desktop ul {
+  height: 70px;
+  flex-direction : row;
+}
+.menu-desktop a {
+  font-size: 1.6em;
+  padding: 0 .5em;
+}
+.menu-desktop .cursor-pointer {
+  left: 75%;
+  top: 72%;
+}
+
+.menu-footer {
+  font-size: 0.8em;
+  min-height: 200px;
+  position: relative;
+  width: 100%;
+}
+.menu-footer .first-row {
+  display: flex;
+  flex-direction: column;
+}
+.menu-footer ul {
+  list-style: none;
+  margin-right: 1em;
+}
+.menu-footer a {
+  text-decoration: none;
+}
+.menu-footer h4 {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.menu-footer .cursor-pointer {
+  left: 11%;
+  top: 61%;
+}
+
+@media screen and (min-width: 620px) {
+  .menu-desktop {
+    overflow: initial;
+  }
+  .menu-footer .first-row {
+    flex-direction: row;
+  }
+  .menu-footer h4 {
+    margin-top: 1em;
+  }
+}
+
+
+.social {
+  font-size: 1.5em;
+  padding: .5em;
+}
+
+.boutons .line {
+  padding: 0.5em;
+}
+.btn {
+  background-color: rgba(0,0,0,0);
+  padding: 0.2em 0.4em;
+}
+.btn1 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #151132;
+  color: #151132;
+}
+.btn1:hover {
+  background-color: #151132;
+  color: #fbfbfb;
+}
+
+.btn2 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #0062c4;
+  color: #0062c4;
+}
+.btn2:hover {
+  background-color: #0062c4;
+  color: #151132;
+}
+
+.btn3 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #f62080;
+  color: #f62080;
+}
+.btn3:hover {
+  background-color: #f62080;
+  color: #151132;
+}
+
+.btn4 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #ffa430;
+  color: #ffa430;
+}
+.btn4:hover {
+  background-color: #ffa430;
+  color: #151132;
+}
+
+.btn5 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #0062c4;
+  color: #0062c4;
+}
+.btn5:hover {
+  background-color: #0062c4;
+  color: #151132;
+}
+
+.btn6 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #f62080;
+  color: #f62080;
+}
+.btn6:hover {
+  background-color: #f62080;
+  color: #151132;
+}
+
+.btn7 {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #ffa430;
+  color: #ffa430;
+}
+.btn7:hover {
+  background-color: #ffa430;
+  color: #151132;
+}
+
+.formulaires form {
+  padding: 1em 0.5em;
+}
+.formulaires label {
+  margin-right: 0.5em;
+}
+.formulaires td {
+  text-align: left;
+}
+.formulaires td:first-child {
+  text-align: right;
+}
+/*.formulaires*/ input {
+  border: 2px solid #0062c4;
+  padding: 0.2em 0.4em;
+  margin-bottom: 0.2em;
+}
+/*.formulaires*/ .dark input {
+  border-color: #ffa430;
+  background-color: #2e2a4b;
+  color: #f62080;
+}
+/*.formulaires*/ button {
+  padding: 0.2em 0.4em;
+}

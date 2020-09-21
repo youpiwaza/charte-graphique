@@ -1,5 +1,5 @@
 # Exclude generated files & folders
-dist/
+# dist/ # #Add back /dist as /prod is down, and to give access to people without consoles
 prod/
 
 # Exclude npm/yarn package folders

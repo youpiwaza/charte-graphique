@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"     content="width=device-width, initial-scale=1.0">
+  <meta name="description"  content="TODO / Description de la page">
+
+  <!-- RS / OpenGraph optimisation / https://www.yakaferci.com/open-graph/ / https://opengraphcheck.com/-->
+  <meta property="og:title" content="TODO / RS / Titre" />
+  <meta property="og:type"  content="website" />
+  <meta property="og:url"   content="TODO / RS / url en ligne, ex: http://masamune.fr/cv/competences/" />
+  <meta property="og:image" content="TODO / RS / aperçu en ligne, ex: http://masamune.fr/cv/masamune-logo.jpg" />
+
+  <title>Charte graphique pour CLIENT</title>
+
+  <link rel="shortcut icon"     href="assets/images/glorious-favicon.ico">
+  <link rel="apple-touch-icon"  href="assets/images/apple-touch-glorious-icon.png">
+
+  <!-- Those lines will be removed automatically w. 'gulp prod' -->
+  <link rel="stylesheet" type="text/css" href="css/vendors/normalize.css">
+  <!-- Add font awesome / https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself -->
+  <link rel="stylesheet" type="text/css" href="css/vendors/font-awesome/css/all.min.css">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Minified injected css -->
+  <!-- htmlmin:ignore1-->
+  <style>
+    /* inject:critcss */
+    /* endinject */
+  </style>
+  <!-- htmlmin:ignore1:end-->
+
+  <!-- CSS generated custom classes injection here -->
+</head>
+
+<body class="container">
+
+  <section id="accueil">
+    <div class="content">
+      <h1>Charte graphique</h1>
+      <h2>CLIENT</h2>
+    </div>
+  </section>
+
+  <section id="sommaire">
+    <div class="content">
+      <h2>Sommaire</h2>
+
+      <!-- Les liens du sommaire ainsi que les boutons de navigation sont générés automatiquement en JS -->
+      <ul></ul>
+    </div>
+  </section>
+
+  <!-- Pour rajouter une section, vous pouvez utiliser cette base -->
+  <!-- Attention à l'unicité de l'id -->
+  <!--
+  <section id="unIdUnique">
+    <div class="content">
+      <h2>Mon titre</h2>
+    </div>
+  </section>
+  -->
+  
+  <!-- Les sections DOIVENT contenir des ID afin que la navigation s'effectue correctement -->
+  <section id="logo">
+    <div class="content">
+      <!-- Les sections DOIVENT également contenir un h2, qui permettra de générer le texte de la liste du sommaire -->
+      <h2>Logos et références</h2>
+      <div class="colonnes">
+        <div><img src="assets/images/logo-masamune.jpg" alt="Client logo" height="300" title="Votre logo" width="300"></div>
+        <div>
+          <img src="assets/images/far-cry-3-neon.jpg" alt="Client logo" height="300" title="Votre logo" width="470">
+          <p>L'image de référence qui a inspirée la palette</p>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+  <section id="couleurs">
+    <div class="content">
+      <h2>Palette de couleurs</h2>
+      <div class="description">
+        <p>Une description succinte relative au choix des couleurs</p>
+        <p>Une couleur foncé associée à des couleurs vibrantes</p>
+        <p>Afin de provoquer un effet néon / rétro</p>
+      </div>
+      <div class="colonnes">
+        <div>
+          <h3>Couleurs principales</h3>
+          <!--       
+            Simplement rentrer les couleurs ici, la chaîne est récupérée et réutilisée.
+            Je passe par tinycolor, qui convertit, vous pouvez donc passer plusieurs formats.
+              https://github.com/bgrins/TinyColor#accepted-string-input
+          -->
+          <div class="colors">
+            <div class="color" data-color="151132" data-declinaison="yes">Bleu nuit</div>
+            <div class="color" data-color="0062c4">Bleu électrique</div>
+            <div class="color" data-color="f62080" data-declinaison="yes">Rose électrique</div>
+            <div class="color" data-color="ffa430">Jaune orangé</div>
+            <div class="color" data-color="hahaLolilol">bof</div>
+          </div>
+          <!-- 
+            Note :
+              Des classes CSS seront générées automatiquement pour la couleur de fond, et de texte
+              Pour l'ensemble des couleurs et de leurs déclinsaisons, cf. style.css pour un exemple plus détaillé
+              Exemple : 
+                .bg-color1 {
+                  background-color: #151132;
+                }
+                .color1 {
+                  color: #151132;
+                }
+                .bg-color1-brighter {
+                  background-color: #2e2a4b;
+                }
+                .color1-brighter {
+                  color: #2e2a4b;
+                }
+                .bg-color1-darker {
+                  background-color: #05040c;
+                }
+                .color1-darker {
+                  color: #05040c;
+                }
+          -->
+        </div>
+        <!-- Remplie ou masquée automatiquement en fonction des attributs data-declinaison des couleurs -->
+        <div class="declinaisonsColumn">
+      </div>
+    </div>
+  </section>
+
+  <section id="regles-couleurs">
+    <div class="content">
+      <h2>Couleurs : règles et usages</h2>
+      <div class="colonnes">
+        <div class="recommandations">
+          <h3>Recommandations ✅</h3>
+          <p>Utiliser les couleurs vive sur un fond foncé</p>
+          <div class="fond bg-color1">
+            <div class="couleur bg-color2"></div>
+            <div class="couleur bg-color3"></div>
+            <div class="couleur bg-color4"></div>
+          </div>
+        </div>
+        <div class="interdits">
+          <h3>Interdits ⛔</h3>
+          <p>Couleurs vives uniquement : aggressif, manque de contraste</p>
+          <div class="fond bg-color2">
+            <div class="couleur bg-color3"></div>
+            <div class="couleur bg-color4"></div>
+          </div>
+        </div>
+        <div class="usages">
+          <h3>Usages sur visuels 🖼️</h3>
+          <p>Fond clairs > Utiliser la couleur foncée</p>
+          <div class="fond fond-img-bright">
+            <div class="color4">Some Text ⛔</div>
+            <div class="color1">Some Text ✅</div>
+            <div class="color3">Some Text ⛔</div>
+          </div>
+          <p>Fond foncés > Utiliser une couleur claire d'un ton différent</p>
+          <div class="fond fond-img-dark">
+            <div class="color2">Some Text ⛔</div>
+            <div class="color3">Some Text ✅</div>
+            <div class="color4">Some Text ✅</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="typo">
+    <div class="content">
+      <h2>Typographie</h2>
+      <div class="colonnes">
+
+        <div class="main mx-width-half font1">
+          <h3>Shadows Into Light</h3>
+          <p><em>Pour le côté 'Tag', pour les titres</em></p>
+          <div class="text-left">
+            <h1>Exemple de titre h1</h1>
+            <h2>Exemple de titre h2</h2>
+            <h3>Exemple de titre h3</h3>
+            <h4>Exemple de titre h4</h4>
+            <h5>Exemple de titre h5</h5>
+            <h6>Exemple de titre h6</h6>
+          </div>
+          
+          <h4>Représentation des caractères</h4>
+          <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+          <p>abcdefghijklmnopqrstuvwxyz</p>
+          <p>0123456789£€$&*()/!?.,:;</p>
+          <p>ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŒœŠšŸƒ</p>
+          <p><a href="https://fonts.google.com/specimen/Shadows+Into+Light?slant=1#standard-styles">Lien Google web fonts</a></p>
+        </div>
+          
+        <div class="main mx-width-half font2">
+          <h3 class="font2">Roboto Condensed</h3>
+          <p><em>Police sérrée, pour la lisibilité, appliquée autres textes</em></p>
+          <h4>Extrait de texte</h4>
+          <p class="text-justify">Ego vero sic intellego, Patres conscripti, nos hoc tempore in provinciis
+            decernendis perpetuae pacis habere oportere rationem. Nam quis hoc
+            non sentit omnia alia esse nobis vacua ab omni periculo atque etiam
+            suspicione belli. Ego vero sic intellego, Patres conscripti, nos hoc tempore
+            in provinciis decernendis perpetuae pacis habere oportere rationem.
+            Nam quis hoc non sentit omnia alia esse nobis vacua ab omni periculo
+            atque etiam suspicione belli.
+          </p>
+            
+          <h4>Représentation des caractères</h4>
+          <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+          <p>abcdefghijklmnopqrstuvwxyz</p>
+          <p>0123456789£€$&*()/!?.,:;</p>
+          <p>ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿŒœŠšŸƒ</p>
+          <p><a href="https://fonts.google.com/specimen/Roboto+Condensed?slant=1&query=roboto+conde">Lien Google web fonts</a></p>
+          
+          <hr>
+
+          <h4 class="font3">Press Start 2P</h4>
+          <p>Police alterative, pour le côté 'pixels' et 'jeux-vidéos'</p>
+          <p class="font3 small-font">Ego vero sic intellego, Patres conscripti, nos hoc tempore in provinciis
+            decernendis perpetuae pacis habere oportere rationem. Nam quis hoc
+            non sentit omnia alia esse nobis vacua ab omni periculo atque etiam
+            suspicione belli.</p>
+          <p><a href="https://fonts.google.com/specimen/Press+Start+2P?slant=1#license">Lien Google web fonts</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="visuel">
+    <div class="content">
+      <h2>Aspect visuel</h2>
+      
+      <div class="colonnes">
+        <div class="mx-width-half">
+          <h3>Style recherché</h3>
+          <p>Mots clés (ex: luxe, moderne, simple, nature)</p>
+          <p>Le thème proposé est inspiré du mouvement et des jeux de couleurs <em>retrowave</em></p>
+          <p>On y associe de vieux graphismes, une bande son utilisant beaucoup de synthétiseurs,
+            des couleurs fluos, et parfois une surabondance de référence (côté nostalgique)
+          </p>
+        </div>
+        
+        <div class="mx-width-half bg-color1 color2">
+          <h3>Rapport couleur texte</h3>
+          <p>De préférence, le fond sera foncé, dans les tons de la couleur foncée.</p>
+          <p>Les textes pourront être agrémenté des trois couleurs flashy,<br>
+            même si le bleu reste recommandé pour la majorité des textes,<br>
+            que les <span class="color3">autres couleurs</span> sont à réserver pour les éléments plus importants <span class="color4">(points focaux)</span>
+          </p>
+          <hr>
+          <p class="font3 small-font">Cela fonctionne <span class="color4">encore mieux</span> avec la <span class="color3">police alternative</span> ;)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="web">
+    <div class="content">
+      <h2>Composants web</h2>
+      <p><em>Note : Les composants web pourront varier en fonction des besoins, le but ici est d'illustrer l'utilisation des couleurs & polices</em></p>
+      
+      <div class="colonnes">
+        
+        <div class="icones-et-boutons">
+          <h3>Icônes & Boutons</h3>
+          <div class="icones">
+            <div class="social color1">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-reddit-alien"></i>
+            </div>
+            <div class="social bg-color1 color2">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-reddit-alien"></i>
+            </div>
+            <div class="social bg-color1 color3">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-reddit-alien"></i>
+            </div>
+            <div class="social bg-color1 color4">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-reddit-alien"></i>
+            </div>
+          </div>
+          <div class="boutons">
+            <div class="line">
+              <button class="btn btn1">Push me</button>
+              <button class="btn btn2">Push me</button>
+              <button class="btn btn3">Push me</button>
+              <button class="btn btn4">Push me</button>
+            </div>
+            <div class="line bg-color1">
+              <button class="btn btn5 bg-color1-brighter">Push me</button>
+              <button class="btn btn6">Push me</button>
+              <button class="btn btn7">Push me</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="formulaires">
+          <h3>Formulaires</h3>
+          <form action="" class="color2">
+            <table>
+              <tbody>
+                <tr>
+                  <td><label for="idname">Nom</label></td>
+                  <td><input type="text" id="idname" name="name"></td>
+                </tr>
+                <tr>
+                  <td><label for="idemail">Email</label></td>
+                  <td><input type="email" id="idemail" name="email"></td>
+                </tr>
+                <tr>
+                  <td><label for="idpassword">Mot de passe</label></td>
+                  <td><input type="password" id="idpassword" name="password"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><button type="submit" class="btn2">Envoyer</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+          <hr>
+          <form action="" class="dark bg-color1 color4">
+            <table>
+              <tbody>
+                <tr>
+                  <td><label for="idname2">Nom</label></td>
+                  <td><input type="text" id="idname2" name="name"></td>
+                </tr>
+                <tr>
+                  <td><label for="idemail2">Email</label></td>
+                  <td><input type="email" id="idemail2" name="email"></td>
+                </tr>
+                <tr>
+                  <td><label for="idpassword2">Mot de passe</label></td>
+                  <td><input type="password" id="idpassword2" name="password"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><button type="submit" class="btn7">Envoyer</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+
+
+
+      <div>
+        <div class="menus">
+          <h3>Menus et survols</h3>
+          <h4>Menu mobile</h4>
+          <nav class="menu-mobile bg-color1 color3 font1 mx-width-half centre-a-l-ancienne">
+            <div><i class="fab fa-microblog" title="logo"></i> Mon site</div>
+            <button class="btn-menu-mobile bg-color2 color1"><i class="fas fa-bars"></i></button>
+          </nav>
+          <p>
+            Bouton survolé : <button class="btn-menu-mobile bg-color3 color1"><i class="fas fa-bars"></i></button>,
+            Bouton activé : <button class="btn-menu-mobile bg-color4 color1"><i class="fas fa-bars"></i></button>
+          </p>
+          <p>Menu mobile déplié</p>
+          <nav class="menu menu-mobile-deplie bg-color1 color3 font1 centre-a-l-ancienne">
+            <ul>
+              <li><a href="#" class="color3"><i class="fab fa-microblog" title="logo"></i> Mon site</a></li>
+              <li><a href="#" class="color3">Nos produits</a></li>
+              <li><a href="#" class="color3">Qui sommes-nous ?</a></li>
+              <li><a href="#" class="color4 bg-color1-brighter">Lien survolé</a></li>
+              <li><a href="#" class="color3">Contact</a></li>
+            </ul>
+            <i class="fas fa-hand-point-up cursor-pointer"></i>
+          </nav>
+
+
+          <h4>Menu Bureau</h4>
+          <nav class="menu menu-desktop bg-color1 color3 font1 mx-width-half centre-a-l-ancienne">
+            <ul>
+              <li><a href="#" class="color3"><i class="fab fa-microblog" title="logo"></i> Mon site</a></li>
+              <li><a href="#" class="color3">Nos produits</a></li>
+              <li><a href="#" class="color3">Qui sommes-nous ?</a></li>
+              <li class="posr"><a href="#" class="color4 bg-color1-brighter">Lien survolé</a><i class="fas fa-hand-point-up cursor-pointer"></i></li>
+              <li><a href="#" class="color3">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <h4>Menu bas de page</h4>
+          <nav class="menu-footer bg-color1 color2 font2 mx-width-half centre-a-l-ancienne">
+            <div class="first-row">
+              <ul>
+                <li><h4 class="color3">Liens utiles</h4></li>
+                <li><a href="#" class="color2">Conditions d'utilisations</a></li>
+                <li><a href="#" class="color2">Plan du site</a></li>
+                <li class="posr"><a href="#" class="color4">Crédits</a><i class="fas fa-hand-point-up cursor-pointer"></i></li>
+                <li><a href="#" class="color2">Contact</a></li>
+              </ul>
+
+              <ul>
+                <li><h4 class="color3">Partenaires</h4></li>
+                <li><a href="#" class="color2">Jean michel apeupré</a></li>
+                <li><a href="#" class="color2">Jean michel avou</a></li>
+                <li><a href="#" class="color2">Jean michel yaourt</a></li>
+              </ul>
+              
+              <ul class="dark">
+                <li><h4 class="color3">Inscrivez vous à la newsletter</h4></li>
+                <li><input type="email" placeholder="Votre email"><button class="btn btn7">Go</button></li>
+              </ul>
+            </div>
+            <div class="second-row">
+              © Copyright Masamune <script>document.write(new Date().getFullYear());</script>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Créé par <a href="http://masamune.fr" target="_blank" title="Developpeur web fullstack freelance">Masamune</a>, cf. <a href="https://github.com/youpiwaza/charte-graphique" target="_blank" title="Le github du mec">projet de référence</a>.</footer>
+
+  <!-- Those lines will be removed automatically w. 'gulp prod' -->
+  <script src="./js/vendors/fontfaceobserver.js" type="text/javascript"></script>
+  <script type='text/javascript' src='./js/vendors/tinycolor.js'></script>
+  <script src="script.js" type="module"></script>
+
+  <!-- Minified injected js -->
+  <!-- htmlmin:ignore3-->
+  <script>
+    // inject:critjs
+    // endinject
+  </script>
+  <noscript>Beh t'as pas JavaScript, c'est ballot</noscript>
+  <!-- htmlmin:ignore3:end-->
+</body>
+
+</html>
