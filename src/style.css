@@ -14,18 +14,21 @@
  *  8. Don't forget to adapt /assets/js/fonts.js, for improved loading
  *  9. In the "font" section, update links towards google web fonts
 */
+
+/* https://google-webfonts-helper.herokuapp.com/fonts/roboto-condensed */
+/* roboto-condensed-regular - latin */
 @font-face {
-  font-display: swap;
+  /* font-display: swap; */
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Roboto Condensed'), local('RobotoCondensed-Regular'),
-      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
-      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-      url('../assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
+      url('./assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('./assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('./assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+      url('./assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('./assets/fonts/roboto-condensed/roboto-condensed-v18-latin-regular.svg#RobotoCondensed') format('svg'); /* Legacy iOS */
 }
 
 /* https://google-webfonts-helper.herokuapp.com/fonts/shadows-into-light?subsets=latin */
@@ -34,13 +37,13 @@
   font-family: 'Shadows Into Light';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/shadows-into-light-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Shadows Into Light'), local('ShadowsIntoLight'),
-       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.svg#ShadowsIntoLight') format('svg'); /* Legacy iOS */
+       url('./assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/shadows-into-light-v10-latin/shadows-into-light-v10-latin-regular.svg#ShadowsIntoLight') format('svg'); /* Legacy iOS */
 }
 
 /* https://google-webfonts-helper.herokuapp.com/fonts/press-start-2p?subsets=latin */
@@ -49,13 +52,13 @@
   font-family: 'Press Start 2P';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
-       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
+       url('./assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/press-start-2p-v9-latin/press-start-2p-v9-latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
 }
 
 /* Basic css */
@@ -105,7 +108,7 @@ body.font1-loaded h6,
   font-family: 'Shadows Into Light', Arial, sans-serif;
 }
 
-body.font2-loaded .font2, .font2 {
+body.font2-loaded, body.font2-loaded .font2 {
   font-family: 'Roboto Condensed', Arial, sans-serif;
 }
 
@@ -424,11 +427,11 @@ Note :
 
 .fond-img-bright {
   background-size: cover;
-  background-image: url('/assets/images/landscape-bright.jpg');
+  background-image: url('./assets/images/landscape-bright.jpg');
 }
 .fond-img-dark {
   background-size: cover;
-  background-image: url('/assets/images/landscape-dark.jpg');
+  background-image: url('./assets/images/landscape-dark.jpg');
 }
 
 .usages .fond {

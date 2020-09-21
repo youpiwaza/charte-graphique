@@ -1,6 +1,6 @@
 console.log('bottomButtons.js');
 
-import { gsap } from '/js/vendors/index.js';
+import { gsap } from './../../js/vendors/index.js';
 
 export function bottomButtons(sectionsHTML) {
   // console.log('bottomButtons()');

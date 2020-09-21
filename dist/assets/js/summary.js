@@ -1,6 +1,6 @@
 console.log('summary.js');
 
-import { gsap } from '/js/vendors/index.js';
+import { gsap } from './../../js/vendors/index.js';
 
 export function summary(sectionsHTML) {
   // console.log('summary()');

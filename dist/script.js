@@ -1,6 +1,6 @@
 console.log('script.js');
 
-import { gsap } from '/js/vendors/index.js';
+import { gsap } from './js/vendors/index.js';
 import { ScrollTrigger } from './js/vendors/ScrollTrigger.js';
 gsap.registerPlugin(ScrollTrigger);
 import { ScrollToPlugin } from './js/vendors/ScrollToPlugin.js';
