@@ -33,6 +33,7 @@
     "yarn": "^1.22.5"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "fontfaceobserver": "^2.1.0",
     "gsap": "^3.5.1",
     "normalize.css": "^8.0.1",
