@@ -9,8 +9,8 @@
  *  3. Go to the bottom of the page and download the font files
  *  4. Copy them in the /assets/fonts/ folder
  *  5. Copy css provided below
- *  6. Adapt urls (add /assets/, etc.) tu match the place whe you put the font files
- *  7. Change font names in style.css (this file) ~line 70
+ *  6. Adapt urls (add /assets/, etc.) to match the place where you put the font files
+ *  7. Change font names in style.css (this file) ~line 70 according to your needs
  *  8. Don't forget to adapt /assets/js/fonts.js, for improved loading
 */
 @font-face {
