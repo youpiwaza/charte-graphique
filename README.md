@@ -1,6 +1,8 @@
 # Charte graphique orientée web
 
-Afin de présenter plusieurs propositions au client de manière conviviale.
+Afin d'accélérer la création de charte graphique en éliminant les opérations redondantes.
+
+Pour les graphistes qui n'aiment pas le code/la console, vous pouvez récupérer directement le contenu du dossier `/dist` (tout compilé) et adapter. Il suffit de modifier le HTML et normalement àa s'enchaine pas trop mal, cf. la [doc : /src/README.md](./src/README.md).
 
 Basée sur [chaos-boilerplate-front](https://github.com/youpiwaza/chaos-boilerplate-front).
 
@@ -16,9 +18,9 @@ yarn
 gulp watch
 ```
 
-Note : Ne pas passer par gulp prod, qui ne gère pas (encore) correctement les modules JS (pas de transpile ou de concat sur les vendeurs -_-).
+Note : Ne pas passer par `gulp prod`, qui ne gère pas (encore) correctement les modules JS (pas de transpile ou de concat sur les vendeurs -_-).
 
-Note : Les liens du sommaire, ainsi que les boutons de navigation (section suivante) sont générés en JS
+Note : Les liens du sommaire, les boutons de navigation (section suivante), les divs de couleurs (et des classes CSS) sont générés automatiquement en JS.
 
 ---
 
