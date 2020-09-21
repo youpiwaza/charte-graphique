@@ -6,7 +6,8 @@ export function bottomButtons(sectionsHTML) {
   // console.log('bottomButtons()');
   
   // On vire la première (pas de boutons qui pointent vers elle)
-  const cloneSectionsPourBottomButtons = sectionsHTML.slice(1);
+  // const cloneSectionsPourBottomButtons = sectionsHTML.slice(1);
+  const cloneSectionsPourBottomButtons = sectionsHTML;
 
   /// Génération des boutons pour passer à la partie suivante
   // Pour chaque section (excepté la première & la dernière)
