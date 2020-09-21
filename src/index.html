@@ -41,7 +41,6 @@
     <div class="content">
       <h1>Charte graphique</h1>
       <h2>CLIENT</h2>
-      <h3>Composants web</h3>
     </div>
   </section>
 
@@ -82,13 +81,12 @@
   <section id="couleurs">
     <div class="content">
       <h2>Palette de couleurs</h2>
+      <div class="description">
+        <p>Une description succinte relative au choix des couleurs</p>
+        <p>Une couleur foncé associée à des couleurs vibrantes</p>
+        <p>Afin de provoquer un effet néon / rétro</p>
+      </div>
       <div class="colonnes">
-        <div class="description">
-          <p>Une description succinte relative au choix des couleurs</p>
-          <p>Une couleur foncé associée à des couleurs vibrantes</p>
-          <p>Afin de provoquer un effet néon / rétro</p>
-        </div>
-
         <div>
           <h3>Couleurs principales</h3>
           <!--       
@@ -268,17 +266,81 @@
       <p><em>Note : Les composants web pourront varier en fonction des besoins, le but ici est d'illustrer l'utilisation des couleurs & polices</em></p>
       
       <div class="colonnes">
-        <div class="menus">
-          <h3>Menu + survol & menu responsive</h3>
-          
-          <h3>Footer</h3>
-        </div>
+        
         <div class="boutons">
-          <h3>Boutons</h3>
-          <h3>Icônes</h3>
+          <h3>Icônes & Boutons</h3>
         </div>
+
         <div class="formulaires">
           <h3>Formulaires</h3>
+        </div>
+      </div>
+
+
+      
+      <div>
+        <div class="menus">
+          <h3>Menus et survols</h3>
+          <h4>Menu mobile</h4>
+          <nav class="menu-mobile bg-color1 color3 font1 mx-width-half centre-a-l-ancienne">
+            <div><i class="fab fa-microblog" title="logo"></i> Mon site</div>
+            <button class="btn-menu-mobile bg-color2 color1"><i class="fas fa-bars"></i></button>
+          </nav>
+          <p>
+            Bouton survolé : <button class="btn-menu-mobile bg-color3 color1"><i class="fas fa-bars"></i></button>,
+            Bouton activé : <button class="btn-menu-mobile bg-color4 color1"><i class="fas fa-bars"></i></button>
+          </p>
+          <p>Menu mobile déplié</p>
+          <nav class="menu menu-mobile-deplie bg-color1 color3 font1 centre-a-l-ancienne">
+            <ul>
+              <li><a href="#" class="color3"><i class="fab fa-microblog" title="logo"></i> Mon site</a></li>
+              <li><a href="#" class="color3">Nos produits</a></li>
+              <li><a href="#" class="color3">Qui sommes-nous ?</a></li>
+              <li><a href="#" class="color4 bg-color1-brighter">Lien survolé</a></li>
+              <li><a href="#" class="color3">Contact</a></li>
+            </ul>
+            <i class="fas fa-hand-point-up cursor-pointer"></i>
+          </nav>
+
+
+          <h4>Menu Bureau</h4>
+          <nav class="menu menu-desktop bg-color1 color3 font1 mx-width-half centre-a-l-ancienne">
+            <ul>
+              <li><a href="#" class="color3"><i class="fab fa-microblog" title="logo"></i> Mon site</a></li>
+              <li><a href="#" class="color3">Nos produits</a></li>
+              <li><a href="#" class="color3">Qui sommes-nous ?</a></li>
+              <li class="posr"><a href="#" class="color4 bg-color1-brighter">Lien survolé</a><i class="fas fa-hand-point-up cursor-pointer"></i></li>
+              <li><a href="#" class="color3">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <h4>Menu bas de page</h4>
+          <nav class="menu-footer bg-color1 color2 font2 mx-width-half centre-a-l-ancienne">
+            <div class="first-row">
+              <ul>
+                <li><h4 class="color3">Liens utiles</h4></li>
+                <li><a href="#" class="color2">Conditions d'utilisations</a></li>
+                <li><a href="#" class="color2">Plan du site</a></li>
+                <li class="posr"><a href="#" class="color4">Crédits</a><i class="fas fa-hand-point-up cursor-pointer"></i></li>
+                <li><a href="#" class="color2">Contact</a></li>
+              </ul>
+
+              <ul>
+                <li><h4 class="color3">Partenaires</h4></li>
+                <li><a href="#" class="color2">Jean michel apeupré</a></li>
+                <li><a href="#" class="color2">Jean michel avou</a></li>
+                <li><a href="#" class="color2">Jean michel yaourt</a></li>
+              </ul>
+              
+              <ul>
+                <li><h4 class="color3">Inscrivez vous à la newsletter</h4></li>
+                <li><input type="text" placeholder="Votre email"><button>Go</button></li>
+              </ul>
+            </div>
+            <div class="second-row">
+              © Copyright Masamune <script>document.write(new Date().getFullYear());</script>
+            </div>
+          </nav>
         </div>
       </div>
     </div>
