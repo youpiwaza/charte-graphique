@@ -11,7 +11,7 @@ const { cssVendors, jsVendors } = require('./_config');
 
 
 // Copy all assets to /dist
-task('copy-assets', () => src(['src/**/*.*', '!node_modules/**', '!**/node_modules/**', '!**/*.md'])
+task('copy-assets', () => src(['src/**/*.*', '!node_modules/**', '!**/node_modules/**'/*, '!** /*.md'*/])
   .pipe(dest('dist/')));
 
 // Copy all css vendor assets to dist
