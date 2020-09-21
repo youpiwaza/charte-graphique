@@ -105,6 +105,9 @@ export function colors() {
         .bg-color${customCssColorIndex} {
           background-color: ${tinyCouleur.toHexString()};
         }
+        .border-color${customCssColorIndex} {
+          border: 2px solid ${tinyCouleur.toHexString()};
+        }
         .color${customCssColorIndex} {
           color: ${tinyCouleur.toHexString()};
         }
