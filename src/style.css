@@ -80,12 +80,14 @@ body {
   text-align: center;
 }
 
+/*
 body.font1-loaded h1,
 body.font1-loaded h2,
 body.font1-loaded h3,
 body.font1-loaded h4,
 body.font1-loaded h5,
 body.font1-loaded h6,
+*/
 /* You can override font choices thourgh local classes */
 .font1
 {
