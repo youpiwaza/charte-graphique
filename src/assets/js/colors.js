@@ -206,6 +206,8 @@ export function colors() {
             color: ${darker.toHexString()};
           }
         `;
+
+        customCssColorIndex++;
       }
       // Sinon
       else {
