@@ -92,6 +92,7 @@ Change font :
 6. Adapt urls (add /assets/, etc.) to match the place where you put the font files
 7. Change font names in style.css (this file) ~line 70 according to your needs
 8. Don't forget to adapt /assets/js/fonts.js, for improved loading
+9. In the "font" section, update links towards google web fonts
 
 Could have been atomated, but I' drather not with the download of external files.
 
