@@ -26,7 +26,7 @@ Summary, and "next page" buttons will be added automatically.
 
 Label in summary will be extracted from the `<h2>` tag text content.
 
-`<section>` id attribute must be unique.
+`<section>` id attribute must be unique, else **links will break**.
 
 If you want to add columns, use a `colonnes` classe, and add as many `<div>`s as you want.
 
@@ -61,23 +61,32 @@ If you want declinaisons to your colors (brighter and darker), set the `data-dec
 
 That's it. Yeph.
 
-Note that multiples CSS classes will be generated automatically to add colors to the text or background :
+Note that multiples CSS classes will be *generated automatically* to add colors to the text or background :
 
 ```css
-.bg-color1 {
-    background-color: #151132;
-}
-.color1 {
-    color: #151132;
-}
-
-.bg-color2 {
-    background-color: #0062c4;
-}
-.color2 {
-    color: #0062c4;
-}
-/* etc. */
+<style>
+    .bg-color1 {
+      background-color: #151132;
+    }
+    .border-color1 {
+        border: 2px solid #151132;
+    }
+    .color1 {
+        color: #151132;
+    }
+    .bg-color1-brighter {
+      background-color: #2e2a4b;
+    }
+    .color1-brighter {
+      color: #2e2a4b;
+    }
+    .bg-color1-darker {
+      background-color: #05040c;
+    }
+    .color1-darker {
+      color: #05040c;
+    }
+    /* And so on.. for each color */
 ```
 
 ## Fonts

@@ -2,19 +2,18 @@
 
 Afin d'accélérer la création de charte graphique en éliminant les opérations redondantes.
 
-Pour les graphistes qui n'aiment pas le code/la console, vous pouvez récupérer directement le contenu du dossier `/dist` (tout compilé) et adapter. Il suffit de modifier le HTML et normalement àa s'enchaine pas trop mal, cf. la [doc : /src/README.md](./src/README.md).
-
-Basée sur [chaos-boilerplate-front](https://github.com/youpiwaza/chaos-boilerplate-front).
+Pour les graphistes qui n'aiment pas le code/la console, vous pouvez récupérer directement le contenu du dossier `/dist` (tout compilé) et adapter. Il suffit de modifier le HTML (les couleurs surtout) et normalement ça s'enchaine pas trop mal, cf. la [doc : /src/README.md](./src/README.md). Faite juste gaffe à la mise en place des polices.
 
 ```bash
-# Accès au projet depuis la console NODE
-cd Documents\_dev\charte-graphique
+# Accès au projet depuis la console
+# cd Documents\_dev\charte-graphique
 
-# (Installation)
-npm i
+# Installation
 yarn
+# ou
+npm i
 
-# watch
+# Dev depuis /src (watch)
 gulp watch
 ```
 
@@ -24,11 +23,14 @@ Note : Les liens du sommaire, les boutons de navigation (section suivante), les 
 
 ## TODOs
 
+- Arrêter le frenglish FFS >.>
 - Passer css en sass et linter/refacto
 - Couleurs primaires > Convertir en table x')
 - Passer en templating html (pugjs ?) et générer à la volée les composants web
 
 ---
+
+Basée sur [chaos-boilerplate-front](https://github.com/youpiwaza/chaos-boilerplate-front).
 
 ## chaos-boilerplate-front
 
