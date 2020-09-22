@@ -292,6 +292,14 @@ ul {
 
 /* ~Responsive */
 @media screen and (min-width: 620px) {
+  
+}
+
+@media screen and (min-width: 960px) {
+    
+}
+
+@media screen and (min-width: 1280px) {
   .colonnes {
     flex-direction: row;
     justify-content: space-evenly;
@@ -328,9 +336,7 @@ ul {
     padding: .5em;
     width: 70px;
   }
-}
 
-@media screen and (min-width: 960px) {
   body {
     padding: 1em;
   }
@@ -338,11 +344,6 @@ ul {
   footer {
     padding-top: 1em;
   }
-  
-}
-
-@media screen and (min-width: 1280px) {
-
 }
 
 /*
@@ -566,7 +567,7 @@ Note :
   padding: 0.5em;
 }
 
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 1280px) {
   .menu-desktop {
     overflow: initial;
   }
