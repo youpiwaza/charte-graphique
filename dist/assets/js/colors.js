@@ -134,7 +134,7 @@ export function colors() {
 
     let declinaisonsHTMLText = `
       <h3>Déclinaisons</h3>
-      <table class="declinaisons small-font">
+      <table class="declinaisons">
     `;
 
     // Reset custom css classes counter

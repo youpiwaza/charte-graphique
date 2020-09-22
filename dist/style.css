@@ -86,7 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   justify-content: center;
   line-height: 1.4em;
   min-height: 100vh;
@@ -141,7 +141,7 @@ section {
   border-bottom: 1px solid #303030;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 97vh;
   width: 100%;
   padding-bottom: 70px;
   position: relative;
@@ -162,14 +162,14 @@ ul {
   border-radius: 100%;
   bottom: 15px;
   cursor: pointer;
-  height: 30px;
+  height: 40px;
   left: 50%;
-  line-height: 30px;
+  line-height: 38px;
   outline: none;
   position: absolute;
   transform: translateX(-50%);
   vertical-align: middle;
-  width: 30px;
+  width: 40px;
 }
 .button-down:hover {
   background: #A9A9A9;
@@ -238,8 +238,10 @@ ul {
 }
 
 #couleurs ul {
+  display: table-cell;
   list-style-type: none;
   padding-left: .5em;
+  vertical-align: middle;
 }
 
 #couleurs .description {
@@ -275,10 +277,12 @@ ul {
 
 .pastille-small {
   display: table-cell;
-  height: 50px;
-  min-width: 50px;
+  height: 60px;
+  max-width: 60px;
+  min-width: 60px;
+  padding: 0.4em;
   vertical-align: middle;
-  width: 50px;
+  width: 60px;
 }
 
 /* Prevent overflow */
@@ -319,6 +323,7 @@ ul {
 
   .pastille-small {
     height: 70px;
+    max-width: 70px;
     min-width: 70px;
     padding: .5em;
     width: 70px;
@@ -451,8 +456,11 @@ Note :
 .btn-menu-mobile {
   border: none;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 30px;
   height: 50px;
+  /* Bars have a transparent gap underneath */
+  line-height: 40px;
+  vertical-align: middle;
   width: 50px;
 }
 .menu-mobile .btn-menu-mobile:hover {
@@ -537,6 +545,7 @@ Note :
 .menu-footer .first-row {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #0062c4;
 }
 .menu-footer ul {
   list-style: none;
@@ -552,6 +561,9 @@ Note :
 .menu-footer .cursor-pointer {
   left: 11%;
   top: 61%;
+}
+.menu-footer .second-row {
+  padding: 0.5em;
 }
 
 @media screen and (min-width: 620px) {
