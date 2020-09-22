@@ -111,5 +111,6 @@ Could have been atomated, but I' drather not with the download of external files
 
 Docs :
 
+- [Project github](https://github.com/youpiwaza/charte-graphique)
 - [Helper](https://google-webfonts-helper.herokuapp.com/fonts/roboto-condensed)
 - [JS optimzed loading](https://github.com/bramstein/fontfaceobserver)
