@@ -22,6 +22,11 @@ Note : Ne pas passer par `gulp prod`, qui ne gère pas (encore) correctement les
 
 Note : Les liens du sommaire, les boutons de navigation (section suivante), les divs de couleurs (et des classes CSS) sont générés automatiquement en JS.
 
+## TODOs
+
+- Passer css en sass et linter/refacto
+- Couleurs primaires > Convertir en table x')
+
 ---
 
 ## chaos-boilerplate-front
