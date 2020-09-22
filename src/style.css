@@ -596,7 +596,7 @@ Note :
   border: 2px solid #151132;
   color: #151132;
 }
-.btn1:hover {
+.btn1:hover, .boutons.hover .btn1 {
   background-color: #151132;
   color: #fbfbfb;
 }
@@ -606,7 +606,7 @@ Note :
   border: 2px solid #0062c4;
   color: #0062c4;
 }
-.btn2:hover {
+.btn2:hover, .boutons.hover .btn2 {
   background-color: #0062c4;
   color: #151132;
 }
@@ -616,7 +616,7 @@ Note :
   border: 2px solid #f62080;
   color: #f62080;
 }
-.btn3:hover {
+.btn3:hover, .boutons.hover .btn3 {
   background-color: #f62080;
   color: #151132;
 }
@@ -626,7 +626,7 @@ Note :
   border: 2px solid #ffa430;
   color: #ffa430;
 }
-.btn4:hover {
+.btn4:hover, .boutons.hover .btn4 {
   background-color: #ffa430;
   color: #151132;
 }
@@ -636,7 +636,7 @@ Note :
   border: 2px solid #0062c4;
   color: #0062c4;
 }
-.btn5:hover {
+.btn5:hover, .boutons.hover .btn5 {
   background-color: #0062c4;
   color: #151132;
 }
@@ -646,7 +646,7 @@ Note :
   border: 2px solid #f62080;
   color: #f62080;
 }
-.btn6:hover {
+.btn6:hover, .boutons.hover .btn6 {
   background-color: #f62080;
   color: #151132;
 }
@@ -656,9 +656,14 @@ Note :
   border: 2px solid #ffa430;
   color: #ffa430;
 }
-.btn7:hover {
+.btn7:hover, .boutons.hover .btn7 {
   background-color: #ffa430;
   color: #151132;
+}
+
+.boutons.hover .cursor-pointer {
+  right: 15px;
+  top: 32px;
 }
 
 .formulaires form {
