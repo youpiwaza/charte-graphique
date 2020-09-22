@@ -2,6 +2,8 @@
 
 This little project consist of a simple responsive site, oriented to create a graphic chart quickly.
 
+Live example online : [da démo](http://stockage.masamune.fr/divers/charte-graphique-example/).
+
 Most redundant operations have been automated.
 
 Note that everything hasn't been automated, this way the project is flexible enough.
