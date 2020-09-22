@@ -2,7 +2,7 @@
 
 Afin d'accélérer la création de charte graphique en éliminant les opérations redondantes.
 
-Pour les graphistes qui n'aiment pas le code/la console, vous pouvez récupérer directement le contenu du dossier `/dist` (tout compilé) et adapter. Il suffit de modifier le HTML (les couleurs surtout) et normalement ça s'enchaine pas trop mal, cf. la [doc : /src/README.md](./src/README.md). Faite juste gaffe à la mise en place des polices.
+**Pour les graphistes qui n'aiment pas le code/la console, vous pouvez récupérer directement le contenu du dossier `/dist` (tout compilé) et adapter**. Il suffit de modifier le HTML (les couleurs surtout) et normalement ça s'enchaine pas trop mal, cf. la [doc : /src/README.md](./src/README.md). Faite juste gaffe à la mise en place des polices.
 
 ```bash
 # Accès au projet depuis la console
