@@ -26,6 +26,7 @@ Note : Les liens du sommaire, les boutons de navigation (section suivante), les 
 
 - Passer css en sass et linter/refacto
 - Couleurs primaires > Convertir en table x')
+- Passer en templating html (pugjs ?) et générer à la volée les composants web
 
 ---
 
