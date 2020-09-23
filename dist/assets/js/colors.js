@@ -101,6 +101,10 @@ export function colors() {
       }
 
       /// Generate custom CSS classes
+      // Approximative revert text color for button hover, assuming color1 is dark, other bright
+      const firstColor  = tinycolor(couleursHTML[0].dataset.color).toHexString();
+      const secondColor = tinycolor(couleursHTML[1].dataset.color).toHexString();
+
       chaineCustomCss += `
         .bg-color${customCssColorIndex} {
           background-color: ${tinyCouleur.toHexString()};
@@ -110,6 +114,15 @@ export function colors() {
         }
         .color${customCssColorIndex} {
           color: ${tinyCouleur.toHexString()};
+        }
+        .btn${customCssColorIndex} {
+          background-color: rgba(0,0,0,0);
+          border: 2px solid ${tinyCouleur.toHexString()};
+          color: ${tinyCouleur.toHexString()};
+        }
+        .btn${customCssColorIndex}:hover, .boutons.hover .btn${customCssColorIndex} {
+          background-color: ${tinyCouleur.toHexString()};
+          color: ${ customCssColorIndex === 1 ? secondColor : firstColor };
         }
       `;
       customCssColorIndex++;
