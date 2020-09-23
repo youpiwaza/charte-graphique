@@ -222,8 +222,6 @@ export function colors() {
             color: ${darker.toHexString()};
           }
         `;
-
-        customCssColorIndex++;
       }
       // Sinon
       else {
@@ -235,6 +233,7 @@ export function colors() {
           </tr>
         `;
       }
+      customCssColorIndex++;
     });
     // Une fois toutes les déclinaisons ajoutées..
     declinaisonsHTMLText += '</table>';
