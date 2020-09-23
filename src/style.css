@@ -529,7 +529,6 @@ Note :
 .menu-footer .first-row {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #0062c4;
 }
 .menu-footer ul {
   list-style: none;
@@ -588,4 +587,11 @@ Note :
 }
 .formulaires td:first-child {
   text-align: right;
+}
+
+.container .bb-thin {
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom-width: 1px;
 }
