@@ -102,7 +102,7 @@ body.font1-loaded h4,
 body.font1-loaded h5,
 body.font1-loaded h6,
 */
-/* You can override font choices thourgh local classes */
+/* You can override font choices through local classes */
 .font1
 {
   font-family: 'Shadows Into Light', Arial, sans-serif;
