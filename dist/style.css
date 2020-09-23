@@ -249,11 +249,6 @@ ul {
 }
 
 /* Déclinaisons */
-#declinaisons {
-  height: 100px; /* Même taille que l'autre */
-  width: 100%;
-}
-
 .declinaisons {
   border-collapse: collapse;
 }
@@ -277,12 +272,12 @@ ul {
 
 .pastille-small {
   display: table-cell;
-  height: 60px;
-  max-width: 60px;
-  min-width: 60px;
+  height: 70px;
+  max-width: 70px;
+  min-width: 70px;
   padding: 0.4em;
   vertical-align: middle;
-  width: 60px;
+  width: 70px;
 }
 
 /* Prevent overflow */
@@ -307,6 +302,10 @@ ul {
   }
   .colonnes > div {
     max-width: 50%;
+  }
+
+  .declinaisons tr {
+    height: 100px;
   }
 
   .mx-width-half {
@@ -560,6 +559,7 @@ Note :
 }
 .btn {
   background-color: rgba(0,0,0,0);
+  cursor: pointer;
   padding: 0.2em 0.4em;
 }
 .btn1 {
