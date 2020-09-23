@@ -137,6 +137,14 @@ img {
   max-width: 100%;
 }
 
+input {
+  margin-bottom: 0.2em;
+  padding: 0.2em 0.4em;
+}
+input[type=submit]{
+  cursor: pointer;
+}
+
 p {
   /* word-break: break-all; */
   word-break: break-word;
@@ -580,10 +588,4 @@ Note :
 }
 .formulaires td:first-child {
   text-align: right;
-}
-/*.formulaires*/
-input {
-  cursor: pointer;
-  margin-bottom: 0.2em;
-  padding: 0.2em 0.4em;
 }
