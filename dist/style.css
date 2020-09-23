@@ -557,7 +557,7 @@ Note :
 .boutons .line {
   padding: 0.5em;
 }
-.btn {
+button {
   background-color: rgba(0,0,0,0);
   cursor: pointer;
   padding: 0.2em 0.4em;
@@ -580,16 +580,9 @@ Note :
 .formulaires td:first-child {
   text-align: right;
 }
-/*.formulaires*/ input {
-  border: 2px solid #0062c4;
-  padding: 0.2em 0.4em;
+/*.formulaires*/
+input {
+  cursor: pointer;
   margin-bottom: 0.2em;
-}
-/*.formulaires*/ .dark input {
-  border-color: #ffa430;
-  background-color: #2e2a4b;
-  color: #f62080;
-}
-/*.formulaires*/ button {
   padding: 0.2em 0.4em;
 }
